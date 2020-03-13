@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
 
+import Input from './components/Input';
+
 class App extends Component {
 
     constructor(props) {
@@ -13,9 +15,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div>
-                    Blank State
-                </div>
+                <h1>
+                    Sometimes we're too hard on ourselves. Write out your negative self talk—let's try to change it up.
+                </h1>
+                <Input/>
             </div>
         );
     }
