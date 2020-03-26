@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: #13131a;
+  background: #242530;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
   font-size: 20px;
   color: white;
   margin: 100px 0px 40px 0px;
-  width: calc(80vw - 200px);
+  width: calc(80vw - 190px);
   z-index: 10;
   pointer-events: none;
 }

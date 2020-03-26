@@ -29,6 +29,26 @@ class Input extends Component {
     }
 
     render() {
+
+        // var image = document.getElementById('imagefiles'), parent = image.parentNode, input = document.createElement('input');
+        // parent.replaceChild(input, image);
+
+
+        let text = this.state.inputText.split(' ');
+
+        for (let i = 0; i < text.length - 1; i += 2) {
+            if (text[i] === "cheers") {
+                text[i] = <div className="fancy">{text[i]}</div>;
+            }
+        }
+
+        console.log(text);
+        // for (let i = 0; i < text.length; i += 2) {
+        //     if (text[i]) {
+        //         text[i] = text[i].trim();
+        //     }
+        // }
+
         return (
             <div id="input-container">
                 <div
@@ -39,7 +59,7 @@ class Input extends Component {
                     type="text"
                     placeholder="What is your negative self talk?"
                     onChange={this.handleTextChange.bind(this)}
-                    value={this.state.inputText}>
+                    value={text}>
                     Write what u wanna
                     </div>
             </div>
