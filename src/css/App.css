@@ -17,12 +17,9 @@ h1 {
   pointer-events: none;
 }
 
-#input-container {
-  width: 100vw;
-}
-#input-container .input {
+#start-typing {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   padding: 160px 240px 10px 240px;
   font-size: 30px;
@@ -30,7 +27,7 @@ h1 {
   border: none;
   resize: none;
 }
-#input-container .input:focus {
+#start-typing:focus {
   outline: none;
 }
 

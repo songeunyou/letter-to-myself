@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ContentEditable from 'react-contenteditable';
 
 class Input extends Component {
 
@@ -6,64 +7,31 @@ class Input extends Component {
         super(props);
 
         this.state = {
-            inputText: ""
+            html: "<p>What is your negative self talk?</p>"
         };
 
-        this.inputText = React.createRef();
-        this.handleTextChange = this.handleTextChange.bind(this);
+        this.contentEditable = React.createRef();
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
         document.getElementById("start-typing").focus();
-        this.inputText.current.addEventListener('input', ({target}) => {
-            target.style.height = 'auto';
-            target.style.height = `${target.scrollHeight}px`;
-        });
     }
 
-    handleTextChange(){
-        let {value} = this.inputText.current;
-        this.setState({
-            inputText: value
-        });
-    }
+    handleChange = evt => {
+        this.setState({html: evt.target.value});
+    };
+
 
     render() {
-
-        // var image = document.getElementById('imagefiles'), parent = image.parentNode, input = document.createElement('input');
-        // parent.replaceChild(input, image);
-
-
-        let text = this.state.inputText.split(' ');
-
-        for (let i = 0; i < text.length - 1; i += 2) {
-            if (text[i] === "cheers") {
-                text[i] = <div className="fancy">{text[i]}</div>;
-            }
-        }
-
-        console.log(text);
-        // for (let i = 0; i < text.length; i += 2) {
-        //     if (text[i]) {
-        //         text[i] = text[i].trim();
-        //     }
-        // }
-
-        return (
-            <div id="input-container">
-                <div
-                    contentEditable="true"
-                    ref={this.inputText}
-                    id="start-typing"
-                    className="input"
-                    type="text"
-                    placeholder="What is your negative self talk?"
-                    onChange={this.handleTextChange.bind(this)}
-                    value={text}>
-                    Write what u wanna
-                    </div>
-            </div>
-        );
+        return <ContentEditable
+                id="start-typing"
+                innerRef={this.contentEditable}
+                html={this.state.html} // innerHTML of the editable div
+                disabled={false}       // use true to disable editing
+                onChange={this.handleChange} // handle innerHTML change
+                tagName='article' // Use a custom HTML tag (uses a div by default)
+                />
     }
 }
 

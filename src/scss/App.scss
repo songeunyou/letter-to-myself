@@ -17,22 +17,17 @@ h1 {
     pointer-events: none;
 }
 
-#input-container {
+#start-typing {
+    position: relative;
     width: 100vw;
-    // change width to responsive widths later
+    min-height: 100vh;
+    padding: 160px 240px 10px 240px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    resize: none;
 
-    .input {
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        padding: 160px 240px 10px 240px;
-        font-size: 30px;
-        color: white;
-        border: none;
-        resize: none;
-
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+        outline: none;
     }
 }
