@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import ContentEditable from 'react-contenteditable';
 
+import list from './posNegList';
+
 class Input extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            html: "<p>What is your negative cheers self talk?</p>"
+            html: "What is your negative self talk?"
         };
 
         this.contentEditable = React.createRef();
@@ -27,9 +29,14 @@ class Input extends Component {
 
         let text = this.state.html.split(' ');
 
-        for (let i = 0; i < text.length - 1; i += 2) {
-            if (text[i] === "cheers") {
-                text[i] = '<div class="help">cheers</div>';
+        console.log("text", text)
+
+        for (let i = 0; i < text.length - 1; i++) {
+            for (let j = 0; j < list.length; j++) {
+                if (text[i] === list[j].negative) {
+                    text[i] = list[j].positive;
+                    console.log("ding")
+                }
             }
         }
 
