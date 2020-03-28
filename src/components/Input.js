@@ -7,7 +7,7 @@ class Input extends Component {
         super(props);
 
         this.state = {
-            html: "<p>What is your negative self talk?</p>"
+            html: "<p>What is your negative cheers self talk?</p>"
         };
 
         this.contentEditable = React.createRef();
@@ -24,10 +24,21 @@ class Input extends Component {
 
 
     render() {
+
+        let text = this.state.html.split(' ');
+
+        for (let i = 0; i < text.length - 1; i += 2) {
+            if (text[i] === "cheers") {
+                text[i] = '<div class="help">cheers</div>';
+            }
+        }
+
+        let p = text.join(' ');
+
         return <ContentEditable
                 id="start-typing"
                 innerRef={this.contentEditable}
-                html={this.state.html} // innerHTML of the editable div
+                html={p} // innerHTML of the editable div
                 disabled={false}       // use true to disable editing
                 onChange={this.handleChange} // handle innerHTML change
                 tagName='article' // Use a custom HTML tag (uses a div by default)
