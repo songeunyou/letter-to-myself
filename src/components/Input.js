@@ -13,41 +13,43 @@ class Input extends Component {
         };
 
         this.contentEditable = React.createRef();
-        this.handleChange = this.handleChange.bind(this);
+        this.checkForSpace = this.checkForSpace.bind(this);
     }
 
     componentDidMount() {
         document.getElementById("start-typing").focus();
     }
 
-    handleChange = evt => {
-        this.setState({html: evt.target.value});
+    checkForSpace = evt => {
+        if (evt.key === " ") {
+            let text = evt.target.textContent.split(' ');
+
+            for (let i = 0; i < text.length; i++) {
+                for (let j = 0; j < list.length; j++) {
+                    if (text[i] === list[j].negative) {
+                        text[i] = list[j].positive;
+                    }
+                }
+            }
+
+            let p = text.join(' ');
+
+            this.setState({html: p});
+
+        } else {
+            this.setState({html: evt.target.textContent});
+        }
     };
 
 
     render() {
 
-        let text = this.state.html.split(' ');
-
-        console.log("text", text)
-
-        for (let i = 0; i < text.length - 1; i++) {
-            for (let j = 0; j < list.length; j++) {
-                if (text[i] === list[j].negative) {
-                    text[i] = list[j].positive;
-                    console.log("ding")
-                }
-            }
-        }
-
-        let p = text.join(' ');
-
         return <ContentEditable
                 id="start-typing"
                 innerRef={this.contentEditable}
-                html={p} // innerHTML of the editable div
+                html={this.state.html} // innerHTML of the editable div
                 disabled={false}       // use true to disable editing
-                onChange={this.handleChange} // handle innerHTML change
+                onKeyDown={this.checkForSpace}
                 tagName='article' // Use a custom HTML tag (uses a div by default)
                 />
     }
