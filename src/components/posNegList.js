@@ -16,7 +16,7 @@ let list = [
     },
     {
         negative: "hate",
-        positive: "love"
+        positive: '<div class="love">love</div>'
     },
     {
         negative: "dislike",
@@ -28,7 +28,7 @@ let list = [
     },
     {
         negative: "sad",
-        positive: "good"
+        positive: '<div class="good">good</div>'
     },
     {
         negative: "down",

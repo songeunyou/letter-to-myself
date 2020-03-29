@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Cooper;
+  src: url("../fonts/CooperLight.ttf") format("truetype");
+}
 .App {
   height: 100%;
   min-height: 100vh;
@@ -5,6 +9,7 @@
   justify-content: center;
   flex-wrap: wrap;
   background: #242530;
+  font-family: Cooper;
 }
 
 h1 {
@@ -29,6 +34,16 @@ h1 {
 }
 #start-typing:focus {
   outline: none;
+}
+
+.love {
+  display: inline;
+  color: red;
+}
+
+.good {
+  display: inline;
+  color: blue;
 }
 
 /*# sourceMappingURL=App.css.map */

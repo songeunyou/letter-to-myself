@@ -9,36 +9,31 @@ class Input extends Component {
         super(props);
 
         this.state = {
-            html: "What is your negative self talk?"
+            placeholder: "What is your negative self talk?",
+            html: ""
         };
 
         this.contentEditable = React.createRef();
-        this.checkForSpace = this.checkForSpace.bind(this);
+        this.checkForSpace = this.rewrite.bind(this);
     }
 
     componentDidMount() {
         document.getElementById("start-typing").focus();
     }
 
-    checkForSpace = evt => {
-        if (evt.key === " ") {
-            let text = evt.target.textContent.split(' ');
+    rewrite = evt => {
+        let textArr = evt.target.innerHTML.toString().split(' ');
 
-            for (let i = 0; i < text.length; i++) {
-                for (let j = 0; j < list.length; j++) {
-                    if (text[i] === list[j].negative) {
-                        text[i] = list[j].positive;
-                    }
+        for (let i = 0; i < textArr.length - 1; i++) {
+            for (let j = 0; j < list.length; j++) {
+                if (textArr[i] === list[j].negative) {
+                    textArr[i] = list[j].positive;
                 }
             }
-
-            let p = text.join(' ');
-
-            this.setState({html: p});
-
-        } else {
-            this.setState({html: evt.target.textContent});
         }
+
+        let p = textArr.join(' ');
+        this.setState({html: p});
     };
 
 
@@ -47,9 +42,9 @@ class Input extends Component {
         return <ContentEditable
                 id="start-typing"
                 innerRef={this.contentEditable}
-                html={this.state.html} // innerHTML of the editable div
+                html={false ? this.state.placeholder + this.state.html : this.state.html} // innerHTML of the editable div
                 disabled={false}       // use true to disable editing
-                onKeyDown={this.checkForSpace}
+                onKeyDown={this.rewrite}
                 tagName='article' // Use a custom HTML tag (uses a div by default)
                 />
     }
