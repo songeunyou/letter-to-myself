@@ -66,9 +66,17 @@ let list = [
         negative: "scared",
         positive: "not scared"
     },
+    {
+        negative: "unsafe",
+        positive: "safe"
+    },
 
     /*---------- descriptors ----------*/
 
+    {
+        negative: "negative",
+        positive: "positive"
+    },
     {
         negative: "ugly",
         positive: "beautiful"
@@ -109,10 +117,144 @@ let list = [
         negative: "stupid",
         positive: "intelligent"
     },
+    {
+        negative: "uncomfortable",
+        positive: "comfortable"
+    },
+    {
+        negative: "dirty",
+        positive: "comfortable"
+    },
+    {
+        negative: "disgusting",
+        positive: "positive"
+    },
+    {
+        negative: "sick",
+        positive: "understandable"
+    },
+    {
+        negative: "everything",
+        positive: "some things"
+    },
+    {
+        negative: "small",
+        positive: "nice"
+    },
+    {
+        negative: "big",
+        positive: "great"
+    },
+    {
+        negative: "flat",
+        positive: "pleasing"
+    },
+    {
+        negative: "dispensable",
+        positive: "valuable"
+    },
+    {
+        negative: "unworthy",
+        positive: "worthy"
+    },
+    {
+        negative: "tiring",
+        positive: "refreshing"
+    },
+    {
+        negative: "hard",
+        positive: "strengthening"
+    },
+    {
+        negative: "painful",
+        positive: "healing"
+    },
+    {
+        negative: "careless",
+        positive: "careful"
+    },
+    {
+        negative: "unfair",
+        positive: "understandable"
+    },
+    {
+        negative: "disrespectful",
+        positive: "respectful"
+    },
     // {
     //     negative: "give up",
     //     positive: "persevere"
     // },
+
+    /*---------- words ----------*/
+
+    {
+        negative: "trigger",
+        positive: "source of strength"
+    },
+    {
+        negative: "triggers",
+        positive: "sources of strength"
+    },
+    {
+        negative: "anger",
+        positive: "reflection"
+    },
+    {
+        negative: "threat",
+        positive: "harmless thing"
+    },
+    {
+        negative: "hatred",
+        positive: "peacefulness"
+    },
+    {
+        negative: "pain",
+        positive: "calm"
+    },
+    {
+        negative: "insecurity",
+        positive: "self-esteem"
+    },
+    {
+        negative: "anxiety",
+        positive: "confidence"
+    },
+    {
+        negative: "anxieties",
+        positive: "feelings"
+    },
+    {
+        negative: "die",
+        positive: "live"
+    },
+    // {
+    //     negative: "kill myself",
+    //     positive: "get better"
+    // },
+
+
+    /*---------- verbs ----------*/
+
+    // {
+    //     negative: "lied",
+    //     positive: ""
+    // },
+    {
+        negative: "hurt",
+        positive: "better"
+    },
+
+    /*---------- swears ----------*/
+
+    {
+        negative: "fucking",
+        positive: ""
+    },
+    {
+        negative: "shit",
+        positive: ":)"
+    },
 
     /*---------- negations ----------*/
 
@@ -122,6 +264,10 @@ let list = [
     },
     {
         negative: "no",
+        positive: ""
+    },
+    {
+        negative: "didn't",
         positive: ""
     },
     {
@@ -152,6 +298,34 @@ let list = [
         negative: "always",
         positive: "sometimes"
     },
+    {
+        negative: "never",
+        positive: ""
+    },
+    {
+        negative: "every",
+        positive: "some of the"
+    },
+    {
+        negative: "all",
+        positive: "some of"
+    },
+    {
+        negative: "how",
+        positive: ""
+    },
+    {
+        negative: "ever",
+        positive: ""
+    },
+    {
+        negative: "so",
+        positive: ""
+    }
+    // {
+    //     negative: "so much",
+    //     positive: "a little"
+    // },
     // {
     //     negative: "no one",
     //     positive: "someone"
