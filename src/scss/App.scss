@@ -38,12 +38,59 @@ h1 {
     }
 }
 
+p {
+    z-index: 5;
+}
+
+.inline {
+    display: inline-block;
+    margin: 0px 4px;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.hopeful {
+    width: 180px;
+    min-height: 450px;
+    height: 450px;
+    transform: translateY(-20px);
+    background-position: bottom;
+    background-image: url("../media/hopeful.jpg");
+
+    p {
+        color: #173F09;
+        transform: translateY(20px);
+        font-weight: bolder;
+    }
+}
+
+
+
+
+
+
+
 .love {
-    display: inline;
-    color: red;
+    color: #fad343;
+
+    background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .good {
-    display: inline;
     color: blue;
+}
+
+.confidence {
+    width: 180px;
+    max-height: 40px;
+    background-image: url("../media/confidence.jpg");
 }

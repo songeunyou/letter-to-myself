@@ -12,11 +12,11 @@ let list = [
     },
     {
         negative: "insecure",
-        positive: "confident"
+        positive: '<div class="inline confident"><p>confident</p></div>'
     },
     {
         negative: "hate",
-        positive: '<div class="love">love</div>'
+        positive: '<div class="inline love"><p>love</p></div>'
     },
     {
         negative: "dislike",
@@ -28,23 +28,23 @@ let list = [
     },
     {
         negative: "sad",
-        positive: '<div class="good">good</div>'
+        positive: '<div class="inline good"><p>good</p></div>'
     },
     {
         negative: "depressed",
-        positive: '<div class="hopeful">hopeful</div>'
+        positive: '<div class="inline hopeful"><p>hopeful</p></div>'
     },
     {
         negative: "down",
-        positive: '<div class="good">good</div>'
+        positive: '<div class="inline good"><p>good</p></div>'
     },
     {
         negative: "worry",
-        positive: "feel calm"
+        positive: '<div class="inline calm"><p>feel calm</p></div>'
     },
     {
         negative: "worried",
-        positive: "calm"
+        positive: '<div class="inline calm"><p>calm</p></div>'
     },
     {
         negative: "anxious",
@@ -64,7 +64,7 @@ let list = [
     },
     {
         negative: "annoyed",
-        positive: "calm"
+        positive: '<div class="inline calm">calm</div>'
     },
     {
         negative: "afraid",
@@ -223,15 +223,15 @@ let list = [
     },
     {
         negative: "pain",
-        positive: "calm"
+        positive: '<div class="inline calm2">calm</div>'
     },
     {
         negative: "insecurity",
-        positive: "self-esteem"
+        positive: '<div class="inline self-esteem">self-esteem</div>'
     },
     {
         negative: "anxiety",
-        positive: "confidence"
+        positive: '<div class="inline confidence"><p>confidence</p></div>'
     },
     {
         negative: "anxieties",
