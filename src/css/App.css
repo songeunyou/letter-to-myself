@@ -51,12 +51,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bolder;
 }
 
 .hopeful {
   width: 180px;
-  min-height: 450px;
-  height: 450px;
+  height: 400px;
   transform: translateY(-20px);
   background-position: bottom;
   background-image: url("../media/hopeful.jpg");
@@ -64,7 +64,21 @@ p {
 .hopeful p {
   color: #173F09;
   transform: translateY(20px);
-  font-weight: bolder;
+}
+
+.beautiful {
+  width: 200px;
+  height: 130px;
+  transform: translateY(-84px);
+  background-position: bottom;
+  background-image: url("../media/beautiful.jpg");
+}
+.beautiful p {
+  color: #f5ab00;
+  transform: translateY(84px);
+  background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .love {

@@ -87,7 +87,7 @@ let list = [
     },
     {
         negative: "ugly",
-        positive: "beautiful"
+        positive: '<div class="inline beautiful"><p>beautiful</p></div>'
     },
     {
         negative: "terrible",
