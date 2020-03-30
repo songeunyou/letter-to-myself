@@ -31,12 +31,20 @@ let list = [
         positive: '<div class="good">good</div>'
     },
     {
+        negative: "depressed",
+        positive: '<div class="hopeful">hopeful</div>'
+    },
+    {
         negative: "down",
-        positive: "good"
+        positive: '<div class="good">good</div>'
     },
     {
         negative: "worry",
         positive: "feel calm"
+    },
+    {
+        negative: "worried",
+        positive: "calm"
     },
     {
         negative: "anxious",
@@ -181,10 +189,15 @@ let list = [
         negative: "disrespectful",
         positive: "respectful"
     },
-    // {
-    //     negative: "give up",
-    //     positive: "persevere"
-    // },
+    {
+        negative: "over",
+        positive: "improved"
+    },
+    {
+        negative: "give",
+        secondNegative: "up",
+        positive: "persevere"
+    },
 
     /*---------- words ----------*/
 
@@ -228,10 +241,24 @@ let list = [
         negative: "die",
         positive: "live"
     },
-    // {
-    //     negative: "kill myself",
-    //     positive: "get better"
-    // },
+    {
+        negative: "waste",
+        positive: "good use"
+    },
+    {
+        negative: "fuckup",
+        positive: "blessing"
+    },
+    {
+        negative: "kill",
+        secondNegative: "myself",
+        positive: "get better"
+    },
+    {
+        negative: "no",
+        secondNegative: "one",
+        positive: "many people"
+    },
 
 
     /*---------- verbs ----------*/
@@ -321,22 +348,12 @@ let list = [
     {
         negative: "so",
         positive: ""
+    },
+    {
+        negative: "so",
+        secondNegative: "much",
+        positive: "a little"
     }
-    // {
-    //     negative: "so much",
-    //     positive: "a little"
-    // },
-    // {
-    //     negative: "no one",
-    //     positive: "someone"
-    // },
 ]
 
 export default list;
-
-
-
-// {
-//     negative: "hate",
-//     positive: '<div class="love">love</div>'
-// }

@@ -24,11 +24,26 @@ class Input extends Component {
     rewrite = evt => {
         let textArr = evt.target.innerHTML.toString().split(' ');
 
-        for (let i = 0; i < textArr.length - 1; i++) {
+        for (let i = 0; i < textArr.length - 2; i++) {
             for (let j = 0; j < list.length; j++) {
                 if (textArr[i] === list[j].negative) {
-                    textArr[i] = list[j].positive;
+                    if (textArr[i + 1] && list[j].secondNegative && textArr[i + 1] === list[j].secondNegative) {
+                        textArr.splice(i, 2, list[j].positive)
+                    } else {
+                        textArr[i] = list[j].positive;
+                    }
                 }
+            }
+
+            // changing from "a" to "an" after wordswap
+            if (textArr[i - 1] === "a" &&
+                (textArr[i].charAt(0) === "a" || textArr[i].charAt(0) === "e" || textArr[i].charAt(0) === "i" || textArr[i].charAt(0) === "o" || textArr[i].charAt(0) === "u")) {
+                    textArr[i - 1] = "an"
+
+            // changing from "an" to "a" after wordswap
+            } else if (textArr[i - 1] === "an" &&
+                !(textArr[i].charAt(0) === "a" || textArr[i].charAt(0) === "e" || textArr[i].charAt(0) === "i" || textArr[i].charAt(0) === "o" || textArr[i].charAt(0) === "u")) {
+                    textArr[i - 1] = "a"
             }
         }
 
