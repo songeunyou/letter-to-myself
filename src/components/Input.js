@@ -22,7 +22,7 @@ class Input extends Component {
     }
 
     rewrite = evt => {
-        let textArr = evt.target.innerHTML.toString().split(' ');
+        let textArr = evt.target.innerHTML.toString().split(/[.](?=[ ])|[,! ]/);
 
         for (let i = 0; i < textArr.length - 2; i++) {
             for (let j = 0; j < list.length; j++) {

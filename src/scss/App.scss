@@ -39,68 +39,115 @@ h1 {
 }
 
 p {
-    z-index: 5;
+    display: inline-block;
+    margin: 0px;
+    z-index: 100;
 }
 
 .inline {
+    position: relative;
     display: inline-block;
     margin: 0px 4px;
     z-index: 1;
-    background-position: center;
-    background-size: cover;
+    font-weight: bolder;
+
+    img {
+        position: absolute;
+        top: 0px;
+        z-index: -10;
+    }
 
     p {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bolder;
+        margin: 0px;
     }
 }
 
 .hopeful {
     width: 180px;
-    height: 400px;
-    transform: translateY(-20px);
-    background-position: bottom;
-    background-image: url("../media/hopeful.jpg");
+
+    img {
+        transform: translateY(-20px);
+        width: 180px;
+        height: 380px;
+    }
 
     p {
         color: #173F09;
-        transform: translateY(20px);
     }
 }
 
 .beautiful {
     width: 200px;
-    height: 130px;
-    transform: translateY(-84px);
-    background-position: bottom;
-    background-image: url("../media/beautiful.jpg");
+
+    img {
+        width: 200px;
+        height: 130px;
+        transform: translateY(-84px);
+    }
 
     p {
         color: #f5ab00;
-        transform: translateY(84px);
         background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
 
+.work-in-progress {
+    width: 220px;
+
+    img {
+        max-width: 220px;
+        transform: translateY(-60px);
+    }
+}
+
+.calm {
+    width: 220px;
+
+    img {
+        max-width: 220px;
+        transform: translateY(-60px);
+    }
+
+    p {
+        color: #4a948d;
+    }
+}
+
+.calm2 {
+    width: 220px;
+
+    img {
+        max-width: 220px;
+        transform: translateY(-131px);
+    }
+
+    p {
+        color: #ffa67a;
+    }
+}
 
 .love {
     color: #fad343;
-
     background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.good {
-    color: blue;
+.happy {
+    color: #FAD961;
+    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.confidence {
-    width: 180px;
-    max-height: 40px;
-    background-image: url("../media/confidence.jpg");
+.valuable {
+    color: #ff8ab7;
+    background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -1,3 +1,9 @@
+import hopeful from "../media/hopeful.jpg";
+import beautiful from "../media/beautiful.jpg";
+import workInProgress from "../media/workinprogress.jpg";
+import calm from "../media/calm.jpg";
+import calm2 from "../media/calm2.jpg";
+
 let list = [
 
     /*---------- feelings ----------*/
@@ -16,7 +22,11 @@ let list = [
     },
     {
         negative: "hate",
-        positive: '<div class="inline love"><p>love</p></div>'
+        positive: '<div class="inline love">love</div>'
+    },
+    {
+        negative: "hating",
+        positive: '<div class="inline love">loving</div>'
     },
     {
         negative: "dislike",
@@ -28,23 +38,23 @@ let list = [
     },
     {
         negative: "sad",
-        positive: '<div class="inline good"><p>good</p></div>'
+        positive: '<div class="inline happy">happy</div>'
     },
     {
         negative: "depressed",
-        positive: '<div class="inline hopeful"><p>hopeful</p></div>'
+        positive: `<div class="inline hopeful"><p>hopeful</p><img src=${hopeful}/></div>`
     },
     {
         negative: "down",
-        positive: '<div class="inline good"><p>good</p></div>'
+        positive: '<div class="inline happy">happy</div>'
     },
     {
         negative: "worry",
-        positive: '<div class="inline calm"><p>feel calm</p></div>'
+        positive: `<div class="inline calm"><p>feel calm</p><img src=${calm}/></div>`
     },
     {
         negative: "worried",
-        positive: '<div class="inline calm"><p>calm</p></div>'
+        positive: `<div class="inline calm"><p>calm</p><img src=${calm}/></div>`
     },
     {
         negative: "anxious",
@@ -64,7 +74,7 @@ let list = [
     },
     {
         negative: "annoyed",
-        positive: '<div class="inline calm">calm</div>'
+        positive: `<div class="inline calm"><p>calm</p><img src=${calm}/></div>`
     },
     {
         negative: "afraid",
@@ -87,7 +97,7 @@ let list = [
     },
     {
         negative: "ugly",
-        positive: '<div class="inline beautiful"><p>beautiful</p></div>'
+        positive: `<div class="inline beautiful"><p>beautiful</p><img src=${beautiful}/></div>`
     },
     {
         negative: "terrible",
@@ -99,7 +109,7 @@ let list = [
     },
     {
         negative: "worthless",
-        positive: "valuable"
+        positive: '<div class="inline valuable">valuable</div>'
     },
     {
         negative: "weak",
@@ -111,7 +121,7 @@ let list = [
     },
     {
         negative: "failure",
-        positive: "work in progress"
+        positive: `<div class="inline work-in-progress"><p>work in progress</p><img src=${workInProgress}/></div>`
     },
     {
         negative: "fail",
@@ -159,7 +169,7 @@ let list = [
     },
     {
         negative: "dispensable",
-        positive: "valuable"
+        positive: '<div class="inline valuable">valuable</div>'
     },
     {
         negative: "unworthy",
@@ -223,7 +233,7 @@ let list = [
     },
     {
         negative: "pain",
-        positive: '<div class="inline calm2">calm</div>'
+        positive: `<div class="inline calm2"><p>calm</p><img src=${calm2}/></div>`
     },
     {
         negative: "insecurity",
@@ -334,25 +344,12 @@ let list = [
         positive: "some of the"
     },
     {
-        negative: "all",
-        positive: "some of"
-    },
-    {
-        negative: "how",
-        positive: ""
-    },
-    {
         negative: "ever",
         positive: ""
     },
     {
-        negative: "so",
+        negative: "anymore",
         positive: ""
-    },
-    {
-        negative: "so",
-        secondNegative: "much",
-        positive: "a little"
     }
 ]
 
