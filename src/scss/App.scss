@@ -3,13 +3,50 @@
     src: url("../fonts/CooperLight.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: NeueMachina;
+    src: url("../fonts/NeueMachina.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Ogg;
+    src: url("../fonts/Ogg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Respira;
+    src: url("../fonts/Respira.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SantEliaRough;
+    src: url("../fonts/SantEliaRough.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GoodSans;
+    src: url("../fonts/GoodSans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Adieu;
+    src: url("../fonts/Adieu.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Opposit;
+    src: url("../fonts/Opposit.otf") format("opentype");
+}
+
+
+
 .App {
     height: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #242530;
+    background: #18191f;
     font-family: Cooper;
 }
 
@@ -41,88 +78,33 @@ h1 {
 .inline {
     position: relative;
     display: inline-block;
-    margin: 0px 4px;
+    margin: 0px 2px;
     z-index: 1;
-    font-weight: bolder;
-
-    img {
-        position: absolute;
-        top: 0px;
-        z-index: -10;
-    }
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-    }
+    // font-weight: bolder;
 }
 
 .hopeful {
-    width: 180px;
-
-    img {
-        transform: translateY(-20px);
-        width: 180px;
-        height: 380px;
-    }
-
-    p {
-        color: #173F09;
-    }
+    color: #0026fc;
+    font-family: Ogg;
 }
 
 .beautiful {
-    width: 200px;
-
-    img {
-        width: 200px;
-        height: 130px;
-        transform: translateY(-84px);
-    }
-
-    p {
-        color: #f5ab00;
-        background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    color: #f5ab00;
+    background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .work-in-progress {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-60px);
-    }
 }
 
 .calm {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-60px);
-    }
-
-    p {
-        color: #4a948d;
-    }
+    color: #4affd8;
+    font-family: NeueMachina;
 }
 
 .calm2 {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-131px);
-    }
-
-    p {
-        color: #ffa67a;
-    }
+    color: #ffa67a;
 }
 
 .love {
@@ -137,6 +119,7 @@ h1 {
     background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: Adieu;
 }
 
 .valuable {

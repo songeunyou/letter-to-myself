@@ -18,7 +18,7 @@ let list = [
     },
     {
         negative: "insecure",
-        positive: '<div class="inline confident"><p>confident</p></div>'
+        positive: '<div class="inline confident">confident</div>'
     },
     {
         negative: "hate",
@@ -42,7 +42,7 @@ let list = [
     },
     {
         negative: "depressed",
-        positive: `<div class="inline hopeful"><p>hopeful</p><img src=${hopeful}/></div>`
+        positive: `<div class="inline hopeful">hopeful</div>`
     },
     {
         negative: "down",
@@ -50,11 +50,11 @@ let list = [
     },
     {
         negative: "worry",
-        positive: `<div class="inline calm"><p>feel calm</p><img src=${calm}/></div>`
+        positive: `<div class="inline calm">feel calm</div>`
     },
     {
         negative: "worried",
-        positive: `<div class="inline calm"><p>calm</p><img src=${calm}/></div>`
+        positive: `<div class="inline calm">calm</div>`
     },
     {
         negative: "anxious",
@@ -74,7 +74,7 @@ let list = [
     },
     {
         negative: "annoyed",
-        positive: `<div class="inline calm"><p>calm</p><img src=${calm}/></div>`
+        positive: `<div class="inline calm">calm</div>`
     },
     {
         negative: "afraid",
@@ -97,7 +97,7 @@ let list = [
     },
     {
         negative: "ugly",
-        positive: `<div class="inline beautiful"><p>beautiful</p><img src=${beautiful}/></div>`
+        positive: `<div class="inline beautiful">beautiful</div>`
     },
     {
         negative: "terrible",
@@ -121,7 +121,7 @@ let list = [
     },
     {
         negative: "failure",
-        positive: `<div class="inline work-in-progress"><p>work in progress</p><img src=${workInProgress}/></div>`
+        positive: `<div class="inline work-in-progress">work in progress</div>`
     },
     {
         negative: "fail",
@@ -233,7 +233,7 @@ let list = [
     },
     {
         negative: "pain",
-        positive: `<div class="inline calm2"><p>calm</p><img src=${calm2}/></div>`
+        positive: `<div class="inline calm2">calm</div>`
     },
     {
         negative: "insecurity",
@@ -241,7 +241,7 @@ let list = [
     },
     {
         negative: "anxiety",
-        positive: '<div class="inline confidence"><p>confidence</p></div>'
+        positive: '<div class="inline confidence">confidence</div>'
     },
     {
         negative: "anxieties",
