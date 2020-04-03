@@ -1,8 +1,8 @@
-import hopeful from "../media/hopeful.jpg";
-import beautiful from "../media/beautiful.jpg";
-import workInProgress from "../media/workinprogress.jpg";
-import calm from "../media/calm.jpg";
-import calm2 from "../media/calm2.jpg";
+// import hopeful from "../media/hopeful.jpg";
+// import beautiful from "../media/beautiful.jpg";
+// import workInProgress from "../media/workinprogress.jpg";
+// import calm from "../media/calm.jpg";
+// import calm2 from "../media/calm2.jpg";
 
 let list = [
 
