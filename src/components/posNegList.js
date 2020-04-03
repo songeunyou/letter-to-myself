@@ -58,7 +58,7 @@ let list = [
     },
     {
         negative: "anxious",
-        positive: "grounded"
+        positive: "secure"
     },
     {
         negative: "scared",

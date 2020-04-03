@@ -22,16 +22,22 @@ class Input extends Component {
     }
 
     rewrite = evt => {
-        let textArr = evt.target.innerHTML.toString().split(/[.](?=[ ])|[,! ]/);
+        // let textArr = evt.target.innerHTML.toString().split(/[.](?=[ ])|[,! ]/);
+        let textArr = evt.target.innerHTML.toString().split(" ");
 
         for (let i = 0; i < textArr.length - 2; i++) {
             for (let j = 0; j < list.length; j++) {
                 if (textArr[i] === list[j].negative) {
                     if (textArr[i + 1] && list[j].secondNegative && textArr[i + 1] === list[j].secondNegative) {
+                        // first detecting two-word phrases
                         textArr.splice(i, 2, list[j].positive)
                     } else {
                         textArr[i] = list[j].positive;
                     }
+                } else if (textArr[i].substring(0, textArr[i].length - 1) === list[j].negative) {
+                    // detecting words followed by punctuation -> swap while keeping the punctuation
+                    let punctuation = textArr[i].substring(textArr[i].length - 1, textArr[i].length);
+                    textArr[i] = list[j].positive + punctuation;
                 }
             }
 
