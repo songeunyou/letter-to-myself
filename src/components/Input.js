@@ -57,7 +57,7 @@ class Input extends Component {
         return <ContentEditable
                 id="start-typing"
                 innerRef={this.contentEditable}
-                html={false ? this.state.placeholder + this.state.html : this.state.html} // innerHTML of the editable div
+                html={this.state.html} // innerHTML of the editable div
                 disabled={false}       // use true to disable editing
                 onKeyDown={this.rewrite}
                 tagName='article' // Use a custom HTML tag (uses a div by default)

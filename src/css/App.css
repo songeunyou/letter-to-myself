@@ -36,12 +36,6 @@ h1 {
   outline: none;
 }
 
-p {
-  display: inline-block;
-  margin: 0px;
-  z-index: 100;
-}
-
 .inline {
   position: relative;
   display: inline-block;
