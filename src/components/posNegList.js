@@ -17,6 +17,10 @@ let list = [
         positive: "openminded"
     },
     {
+        negative: "mad",
+        positive: "openminded"
+    },
+    {
         negative: "insecure",
         positive: '<div class="inline confident">confident</div>'
     },
@@ -78,7 +82,7 @@ let list = [
     },
     {
         negative: "afraid",
-        positive: "not afraid"
+        positive: `<div class="inline not-afraid">not afraid</div>`
     },
     {
         negative: "scared",
@@ -87,6 +91,14 @@ let list = [
     {
         negative: "unsafe",
         positive: "safe"
+    },
+    {
+        negative: "upset",
+        positive: "content"
+    },
+    {
+        negative: "unhappy",
+        positive: "happy"
     },
 
     /*---------- descriptors ----------*/
@@ -97,7 +109,7 @@ let list = [
     },
     {
         negative: "ugly",
-        positive: `<div class="inline beautiful">beautiful</div>`
+        positive: '<div class="inline beautiful">beautiful</div>'
     },
     {
         negative: "terrible",
@@ -121,7 +133,7 @@ let list = [
     },
     {
         negative: "failure",
-        positive: `<div class="inline work-in-progress">work in progress</div>`
+        positive: '<div class="inline work-in-progress">work in progress</div>'
     },
     {
         negative: "fail",
@@ -150,10 +162,6 @@ let list = [
     {
         negative: "sick",
         positive: "understandable"
-    },
-    {
-        negative: "everything",
-        positive: "some things"
     },
     {
         negative: "small",
@@ -204,20 +212,44 @@ let list = [
         positive: "improved"
     },
     {
+        negative: "weird",
+        positive: "unique"
+    },
+    {
+        negative: "selfish",
+        positive: "considerate"
+    },
+    {
+        negative: "inadequate",
+        positive: '<div class="inline good-enough">good enough</div>'
+    },
+    {
+        negative: "flawed",
+        positive: "remarkable"
+    },
+    {
+        negative: "powerless",
+        positive: "powerful"
+    },
+    {
+        negative: "dumb",
+        positive: "smart"
+    },
+    {
         negative: "give",
         secondNegative: "up",
-        positive: "persevere"
+        positive: '<div class="inline persevere">persevere</div>'
     },
 
     /*---------- words ----------*/
 
     {
         negative: "trigger",
-        positive: "source of strength"
+        positive: '<div class="inline source-of-strength">source of strength</div>'
     },
     {
         negative: "triggers",
-        positive: "sources of strength"
+        positive: '<div class="inline source-of-strength">source of strength</div>'
     },
     {
         negative: "anger",
@@ -241,7 +273,7 @@ let list = [
     },
     {
         negative: "anxiety",
-        positive: '<div class="inline confidence">confidence</div>'
+        positive: '<div class="inline confident">confidence</div>'
     },
     {
         negative: "anxieties",
@@ -249,7 +281,7 @@ let list = [
     },
     {
         negative: "die",
-        positive: "live"
+        positive: '<div class="inline live">live</div>'
     },
     {
         negative: "waste",
@@ -257,12 +289,12 @@ let list = [
     },
     {
         negative: "fuckup",
-        positive: "blessing"
+        positive: '<div class="inline blessing">blessing</div>'
     },
     {
         negative: "kill",
         secondNegative: "myself",
-        positive: "get better"
+        positive: '<div class="inline get-better">get better</div>'
     },
     {
         negative: "no",
@@ -312,6 +344,10 @@ let list = [
         positive: ""
     },
     {
+        negative: "won't",
+        positive: "will"
+    },
+    {
         negative: "just",
         positive: ""
     },
@@ -321,6 +357,10 @@ let list = [
     },
     {
         negative: "can't",
+        positive: "can"
+    },
+    {
+        negative: "must",
         positive: "can"
     },
     {

@@ -34,7 +34,7 @@ class Input extends Component {
                     } else if (!list[j].secondNegative) { // ensures that we're not detecting and swapping partial phrases
                         textArr[i] = list[j].positive;
                     }
-                } else if (textArr[i].substring(0, textArr[i].length - 1) === list[j].negative && !list[j].secondNegative) {
+                } else if (textArr[i].substring(textArr[i].length - 1, textArr[i].length).match(/^[.,:!?]/) && textArr[i].substring(0, textArr[i].length - 1) === list[j].negative && !list[j].secondNegative) {
                     // detecting words followed by punctuation -> swap while keeping the punctuation
                     let punctuation = textArr[i].substring(textArr[i].length - 1, textArr[i].length);
                     textArr[i] = list[j].positive + punctuation;

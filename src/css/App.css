@@ -15,10 +15,6 @@
   src: url("../fonts/Respira.otf") format("opentype");
 }
 @font-face {
-  font-family: SantEliaRough;
-  src: url("../fonts/SantEliaRough.otf") format("opentype");
-}
-@font-face {
   font-family: GoodSans;
   src: url("../fonts/GoodSans.otf") format("opentype");
 }
@@ -29,6 +25,10 @@
 @font-face {
   font-family: Opposit;
   src: url("../fonts/Opposit.otf") format("opentype");
+}
+@font-face {
+  font-family: Obviously;
+  src: url("../fonts/Obviously.otf") format("opentype");
 }
 .App {
   height: 100%;
@@ -54,11 +54,12 @@ h1 {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  padding: 160px 240px 10px 240px;
+  padding: 160px 240px 160px 240px;
   font-size: 26px;
   color: white;
   border: none;
   resize: none;
+  transition: 0.1s;
 }
 #start-typing:focus {
   outline: none;
@@ -67,32 +68,70 @@ h1 {
 .inline {
   position: relative;
   display: inline-block;
-  margin: 0px 2px;
+  margin: 0px;
   z-index: 1;
 }
 
-.hopeful {
-  color: #8fa0ff;
-  font-family: Ogg;
-}
+/*----- RESPONSIVE FORMATTING -----*/
+@media only screen and (max-width: 1200px) {
+  h1 {
+    width: calc(100vw - 320px);
+  }
 
-.beautiful {
-  color: #f5ab00;
-  background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
+  #start-typing {
+    padding: 160px 160px 160px 160px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  h1 {
+    width: calc(100vw - 200px);
+  }
+
+  #start-typing {
+    padding: 160px 100px 160px 100px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    width: calc(100vw - 120px);
+  }
+
+  #start-typing {
+    padding: 180px 60px 180px 60px;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h1 {
+    width: calc(100vw - 120px);
+  }
+
+  #start-typing {
+    padding: 180px 60px 180px 60px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    margin: 36px 0px 40px 0px;
+    width: calc(100vw - 60px);
+    font-size: 18px;
+  }
+
+  #start-typing {
+    padding: 120px 30px 120px 30px;
+    font-size: 16px;
+  }
+}
+/*----- DESCRIPTORS -----*/
+.confident {
+  color: #85FFBD;
+  background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: GoodSans;
 }
 
-.calm {
-  color: #4affd8;
-  font-family: NeueMachina;
-}
-
-.calm2 {
-  color: #ffa67a;
-}
-
-.love {
+.love, .get-better {
   color: #fad343;
   background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
   -webkit-background-clip: text;
@@ -108,12 +147,94 @@ h1 {
   font-family: Adieu;
 }
 
+.hopeful {
+  color: #8fa0ff;
+  font-family: Ogg;
+}
+
+.calm {
+  color: #4affd8;
+  font-family: NeueMachina;
+}
+
+.not-afraid {
+  color: #2779f5;
+  font-size: 1.1em;
+}
+
+.beautiful {
+  color: #f5ab00;
+  background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Ogg;
+}
+
 .valuable {
   color: #ff8ab7;
   background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: GoodSans;
+}
+
+.work-in-progress {
+  color: #74EBD5;
+  background: linear-gradient(90deg, #2bd6a0 0%, #598ef7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Adieu;
+  font-size: 0.9em;
+}
+
+.good-enough {
+  color: #fcff52;
+  background: -webkit-linear-gradient(90deg, #fcff52 0%, #ff7926 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.02em;
+}
+
+.persevere {
+  color: #00DBDE;
+  background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: NeueMachina;
+  font-size: 1.05em;
+}
+
+.source-of-strength {
+  color: #85FFBD;
+  background: linear-gradient(-45deg, #85FFBD 0%, #FFFB7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: GoodSans;
+}
+
+.calm2 {
+  color: #ffa67a;
+  font-size: 1.1em;
+}
+
+.self-esteem {
+  color: #ff3898;
+  font-family: Obviously;
+  font-size: 0.88em;
+}
+
+.live {
+  color: #ffd230;
+  font-family: Adieu;
+}
+
+.blessing {
+  color: #4158D0;
+  background: linear-gradient(35deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Ogg;
+  font-size: 1.05em;
 }
 
 /*# sourceMappingURL=App.css.map */
