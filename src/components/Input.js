@@ -22,19 +22,20 @@ class Input extends Component {
     }
 
     rewrite = evt => {
-        // let textArr = evt.target.innerHTML.toString().split(/[.](?=[ ])|[,! ]/);
         let textArr = evt.target.innerHTML.toString().split(" ");
+
+        console.log(textArr);
 
         for (let i = 0; i < textArr.length - 2; i++) {
             for (let j = 0; j < list.length; j++) {
-                if (textArr[i] === list[j].negative) {
+                if (textArr[i].toLowerCase() === list[j].negative) {
                     if (textArr[i + 1] && list[j].secondNegative && (textArr[i + 1] === list[j].secondNegative)) {
                         // first detecting two-word phrases
                         textArr.splice(i, 2, list[j].positive)
                     } else if (!list[j].secondNegative) { // ensures that we're not detecting and swapping partial phrases
                         textArr[i] = list[j].positive;
                     }
-                } else if (textArr[i].substring(textArr[i].length - 1, textArr[i].length).match(/^[.,:!?]/) && textArr[i].substring(0, textArr[i].length - 1) === list[j].negative && !list[j].secondNegative) {
+                } else if (textArr[i].substring(textArr[i].length - 1, textArr[i].length).match(/^[.,:!?)]/) && textArr[i].substring(0, textArr[i].length - 1).toLowerCase() === list[j].negative && !list[j].secondNegative) {
                     // detecting words followed by punctuation -> swap while keeping the punctuation
                     let punctuation = textArr[i].substring(textArr[i].length - 1, textArr[i].length);
                     textArr[i] = list[j].positive + punctuation;
@@ -50,8 +51,8 @@ class Input extends Component {
             } else if (textArr[i - 1] === "an" &&
                 !(textArr[i].charAt(0) === "a" || textArr[i].charAt(0) === "e" || textArr[i].charAt(0) === "i" || textArr[i].charAt(0) === "o" || textArr[i].charAt(0) === "u")) {
                     textArr[i - 1] = "a"
+                }
             }
-        }
 
         let p = textArr.join(' ');
         this.setState({html: p});

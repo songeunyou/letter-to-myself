@@ -143,6 +143,11 @@ h1 {
 
 /*----- DESCRIPTORS -----*/
 
+.good, .possible {
+    color: #ff6b42;
+    font-family: Ogg;
+}
+
 .confident {
     color: #85FFBD;
     background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
@@ -151,7 +156,7 @@ h1 {
     font-family: GoodSans;
 }
 
-.love, .get-better {
+.love, .get-better, .admiring {
     color: #fad343;
     background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
     -webkit-background-clip: text;
@@ -159,7 +164,7 @@ h1 {
     font-family: Respira;
 }
 
-.happy {
+.happy, .great, .distinctive {
     color: #FAD961;
     background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
     -webkit-background-clip: text;
@@ -167,22 +172,22 @@ h1 {
     font-family: Adieu;
 }
 
-.hopeful {
+.hopeful, .mindfulness {
     color: #8fa0ff;
     font-family: Ogg;
 }
 
-.calm {
+.calm, .unique, .interesting {
     color: #4affd8;
     font-family: NeueMachina;
 }
 
-.not-afraid {
+.not-afraid, .courageous, .strong, .cool {
     color: #2779f5;
     font-size: 1.1em;
 }
 
-.beautiful {
+.beautiful, .appealing, .better, .attractive {
     color: #f5ab00;
     background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
     -webkit-background-clip: text;
@@ -190,7 +195,7 @@ h1 {
     font-family: Ogg;
 }
 
-.valuable {
+.valuable, .comfortable, .have, .accept, .overcome, .important {
     color: #ff8ab7;
     background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
     -webkit-background-clip: text;
@@ -198,7 +203,7 @@ h1 {
     font-family: GoodSans;
 }
 
-.work-in-progress {
+.work-in-progress, .self-sufficient, .openminded {
     color: #74EBD5;
     background: linear-gradient(90deg, #2bd6a0 0%, #598ef7 100%);
     -webkit-background-clip: text;
@@ -207,7 +212,7 @@ h1 {
     font-size: 0.9em;
 }
 
-.good-enough {
+.good-enough, .refreshing, .comforted {
     color: #fcff52;
     background: -webkit-linear-gradient(90deg, #fcff52 0%, #ff7926 100%);
     -webkit-background-clip: text;
@@ -215,7 +220,7 @@ h1 {
     font-size: 1.02em;
 }
 
-.persevere {
+.persevere, .strengthening, .improving, .motivating {
     color: #00DBDE;
     background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
     -webkit-background-clip: text;
@@ -224,7 +229,7 @@ h1 {
     font-size: 1.05em;
 }
 
-.source-of-strength {
+.source-of-strength, .secure, .exhilarating {
     color: #85FFBD;
     background: linear-gradient(-45deg, #85FFBD 0%, #FFFB7D 100%);
     -webkit-background-clip: text;
@@ -232,7 +237,7 @@ h1 {
     font-family: GoodSans;
 }
 
-.calm2 {
+.calm2, .caring {
     color: #ffa67a;
     font-size: 1.1em;
 }
@@ -243,12 +248,20 @@ h1 {
     font-size: 0.88em;
 }
 
-.live {
+.incredible, .worthy {
+    color: #FAD961;
+    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Respira;
+}
+
+.live, .accepted {
     color: #ffd230;
     font-family: Adieu;
 }
 
-.blessing {
+.blessing, .commit, .re-adjustment, .grateful {
     color: #4158D0;
     background: linear-gradient(35deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     -webkit-background-clip: text;
