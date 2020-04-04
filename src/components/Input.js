@@ -24,8 +24,6 @@ class Input extends Component {
     rewrite = evt => {
         let textArr = evt.target.innerHTML.toString().split(" ");
 
-        console.log(textArr);
-
         for (let i = 0; i < textArr.length - 2; i++) {
             for (let j = 0; j < list.length; j++) {
                 if (textArr[i].toLowerCase() === list[j].negative) {

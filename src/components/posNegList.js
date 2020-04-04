@@ -29,6 +29,7 @@ let list = [
         positive: '<div class="inline love">love</div>'
     },
     {
+        negative: "hates",
         positive: '<div class="inline love">loves</div>'
     },
     {
