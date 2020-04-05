@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: #18191f;
+  background: #121212;
   font-family: Cooper;
 }
 
@@ -54,7 +54,7 @@ h1 {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  padding: 160px 240px 160px 240px;
+  padding: 160px 240px;
   font-size: 26px;
   color: white;
   border: none;
@@ -79,7 +79,7 @@ h1 {
   }
 
   #start-typing {
-    padding: 160px 160px 160px 160px;
+    padding: 160px 160px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -88,7 +88,7 @@ h1 {
   }
 
   #start-typing {
-    padding: 160px 100px 160px 100px;
+    padding: 160px 100px;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -97,7 +97,7 @@ h1 {
   }
 
   #start-typing {
-    padding: 180px 60px 180px 60px;
+    padding: 180px 60px;
     font-size: 22px;
   }
 }
@@ -107,7 +107,7 @@ h1 {
   }
 
   #start-typing {
-    padding: 180px 60px 180px 60px;
+    padding: 180px 60px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -118,7 +118,7 @@ h1 {
   }
 
   #start-typing {
-    padding: 120px 30px 120px 30px;
+    padding: 120px 30px;
     font-size: 16px;
   }
 }
