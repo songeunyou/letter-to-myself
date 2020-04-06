@@ -144,6 +144,10 @@ let list = [
         positive: '<div class="inline valuable">valuable</div>'
     },
     {
+        negative: "useless",
+        positive: '<div class="inline valuable">important</div>'
+    },
+    {
         negative: "unimportant",
         positive: '<div class="inline important">important</div>'
     },
@@ -532,7 +536,7 @@ let list = [
     },
     {
         negative: "hurting",
-        positive: "improving"
+        positive: '<div class="inline improving">improving</div>'
     },
     {
         negative: "cry",
