@@ -66,6 +66,7 @@ h1 {
 }
 
 .confident, .source-of-strength, .secure, .exhilarating { // fear, trigger, anxious, terrifying
+    // GREEN
     color: #85FFBD;
     background: linear-gradient(45deg, #63D497 0%, #FFE16F 100%);
     @include gradientOgg;
@@ -81,12 +82,13 @@ h1 {
     font-family: Ogg;
 }
 
-.hopeful, .mindfulness { // depressed, depression
-    color: #E2A230;
+.hopeful, .mindfulness, .flawless { // depressed, depression
+    color: #E29030;
     font-family: Ogg;
 }
 
 .calm, .unique, .interesting { // worry, weird, boring
+    // GREEN
     color: #79CD9F;
     font-family: Ogg;
 }
@@ -97,6 +99,7 @@ h1 {
 }
 
 .beautiful, .appealing, .better, .attractive { // ugly, disgusting, worse, unattractive
+    // BLUE
     color: #25B2AA;
     font-family: Ogg;
 }
@@ -107,12 +110,14 @@ h1 {
 }
 
 .work-in-progress, .self-sufficient, .openminded { // failure, lonely, angry
+    // GREEN
     color: #40793C;
     font-family: Respira;
     font-size: 0.95em;
 }
 
-.persevere, .strengthening, .improving, .motivating { // give up, damaging, hurting, hard
+.persevere, .strengthening, .improving, .motivating, .desirable { // give up, damaging, hurting, hard
+    // GREEN
     color: #3DA874;
     font-family: Respira;
     font-size: 0.95em;
@@ -123,13 +128,13 @@ h1 {
     font-size: 1.1em;
 }
 
-.self-esteem { // insecurity
+.self-esteem, .genuine { // insecurity
     color: #EF7979;
     font-family: Respira;
     font-size: 0.95em;
 }
 
-.incredible, .worthy { //awful, unworthy
+.incredible, .worthy, .gorgeous { //awful, unworthy
     color: #FAD961;
     background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
     @include gradientRespira;
@@ -141,7 +146,7 @@ h1 {
     font-size: 0.95em;
 }
 
-.blessing, .commit, .re-adjustment, .grateful { // fuckup, cheat, breakdown, bitter
+.commit, .re-adjustment, .grateful, .great-person { // cheat, breakdown, bitter, fuckup, asshole
     color: #FFD17D;
     font-family: Ogg;
 }

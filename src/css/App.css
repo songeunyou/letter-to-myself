@@ -99,8 +99,8 @@ h1 {
   font-family: Ogg;
 }
 
-.hopeful, .mindfulness {
-  color: #E2A230;
+.hopeful, .mindfulness, .flawless {
+  color: #E29030;
   font-family: Ogg;
 }
 
@@ -133,7 +133,7 @@ h1 {
   font-size: 0.95em;
 }
 
-.persevere, .strengthening, .improving, .motivating {
+.persevere, .strengthening, .improving, .motivating, .desirable {
   color: #3DA874;
   font-family: Respira;
   font-size: 0.95em;
@@ -144,13 +144,13 @@ h1 {
   font-size: 1.1em;
 }
 
-.self-esteem {
+.self-esteem, .genuine {
   color: #EF7979;
   font-family: Respira;
   font-size: 0.95em;
 }
 
-.incredible, .worthy {
+.incredible, .worthy, .gorgeous {
   color: #FAD961;
   background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
   -webkit-background-clip: text;
@@ -165,7 +165,7 @@ h1 {
   font-size: 0.95em;
 }
 
-.blessing, .commit, .re-adjustment, .grateful {
+.commit, .re-adjustment, .grateful, .great-person {
   color: #FFD17D;
   font-family: Ogg;
 }
