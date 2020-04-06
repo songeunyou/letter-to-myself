@@ -1,44 +1,5 @@
-@font-face {
-    font-family: Cooper;
-    src: url("../fonts/CooperLight.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: NeueMachina;
-    src: url("../fonts/NeueMachina.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Ogg;
-    src: url("../fonts/Ogg.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Respira;
-    src: url("../fonts/Respira.otf") format("opentype");
-}
-
-@font-face {
-    font-family: GoodSans;
-    src: url("../fonts/GoodSans.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Adieu;
-    src: url("../fonts/Adieu.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Opposit;
-    src: url("../fonts/Opposit.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Obviously;
-    src: url("../fonts/Obviously.otf") format("opentype");
-}
-
-
+@import 'fonts';
+@import 'responsive';
 
 .App {
     height: 100%;
@@ -46,14 +7,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #18191f;
+    background: #1D1D1D;
     font-family: Cooper;
 }
 
 h1 {
     position: absolute;
     font-size: 20px;
-    color: white;
+    color: #E8DECB;
     margin: 80px 0px 40px 0px;
     width: calc(100vw - 480px);
     z-index: 10;
@@ -64,9 +25,9 @@ h1 {
     position: relative;
     width: 100vw;
     min-height: 100vh;
-    padding: 160px 240px 160px 240px;
-    font-size: 26px;
-    color: white;
+    padding: 160px 240px;
+    font-size: 28px;
+    color: #E8DECB;
     border: none;
     resize: none;
     transition: 0.1s;
@@ -84,188 +45,108 @@ h1 {
 }
 
 
-/*----- RESPONSIVE FORMATTING -----*/
-
-@media only screen and (max-width: 1200px) {
-    h1 {
-        width: calc(100vw - 320px);
-    }
-
-    #start-typing {
-        padding: 160px 160px 160px 160px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    h1 {
-        width: calc(100vw - 200px);
-    }
-
-    #start-typing {
-        padding: 160px 100px 160px 100px;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    h1 {
-        width: calc(100vw - 120px);
-    }
-
-    #start-typing {
-        padding: 180px 60px 180px 60px;
-        font-size: 22px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    h1 {
-        width: calc(100vw - 120px);
-    }
-
-    #start-typing {
-        padding: 180px 60px 180px 60px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    h1 {
-        margin: 36px 0px 40px 0px;
-        width: calc(100vw - 60px);
-        font-size: 18px;
-    }
-
-    #start-typing {
-        padding: 120px 30px 120px 30px;
-        font-size: 16px;
-    }
-}
-
-
 /*----- DESCRIPTORS -----*/
 
-.good, .possible {
+@mixin gradientRespira {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+@mixin gradientOgg {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Ogg;
+}
+
+.good, .possible { // bad, impossible
     color: #ff6b42;
     font-family: Ogg;
 }
 
-.confident {
+.confident, .source-of-strength, .secure, .exhilarating { // fear, trigger, anxious, terrifying
+    // GREEN
     color: #85FFBD;
-    background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: GoodSans;
+    background: linear-gradient(45deg, #63D497 0%, #FFE16F 100%);
+    @include gradientOgg;
 }
 
-.love, .get-better, .admiring {
-    color: #fad343;
-    background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Respira;
+.love, .get-better, .admiring { // hate, kill myself, jealous
+    background: -webkit-linear-gradient(-80deg, #FAD05A, #EB2180);
+    @include gradientRespira;
 }
 
-.happy, .great, .distinctive {
-    color: #FAD961;
-    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Adieu;
-}
-
-.hopeful, .mindfulness {
-    color: #8fa0ff;
+.good-enough, .refreshing, .comforted, .happy, .great, .distinctive { // inadequate, tiring, isolated, sad, horrible, strange
+    color: #FFC63F;
     font-family: Ogg;
 }
 
-.calm, .unique, .interesting {
-    color: #4affd8;
-    font-family: NeueMachina;
-}
-
-.not-afraid, .courageous, .strong, .cool {
-    color: #2779f5;
-    font-size: 1.1em;
-}
-
-.beautiful, .appealing, .better, .attractive {
-    color: #f5ab00;
-    background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.hopeful, .mindfulness, .flawless { // depressed, depression
+    color: #E29030;
     font-family: Ogg;
 }
 
-.valuable, .comfortable, .have, .accept, .overcome, .important {
-    color: #ff8ab7;
-    background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: GoodSans;
+.calm, .unique, .interesting { // worry, weird, boring
+    // GREEN
+    color: #79CD9F;
+    font-family: Ogg;
 }
 
-.work-in-progress, .self-sufficient, .openminded {
-    color: #74EBD5;
-    background: linear-gradient(90deg, #2bd6a0 0%, #598ef7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Adieu;
-    font-size: 0.9em;
-}
-
-.good-enough, .refreshing, .comforted {
-    color: #fcff52;
-    background: -webkit-linear-gradient(90deg, #fcff52 0%, #ff7926 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.02em;
-}
-
-.persevere, .strengthening, .improving, .motivating {
-    color: #00DBDE;
-    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: NeueMachina;
-    font-size: 1.05em;
-}
-
-.source-of-strength, .secure, .exhilarating {
-    color: #85FFBD;
-    background: linear-gradient(-45deg, #85FFBD 0%, #FFFB7D 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: GoodSans;
-}
-
-.calm2, .caring {
-    color: #ffa67a;
+.not-afraid, .courageous, .strong, .cool { // afraid, awkward, hurt, uncool
+    color: #44ABC5;
     font-size: 1.1em;
 }
 
-.self-esteem {
-    color: #ff3898;
-    font-family: Obviously;
-    font-size: 0.88em;
+.beautiful, .appealing, .better, .attractive { // ugly, disgusting, worse, unattractive
+    // BLUE
+    color: #25B2AA;
+    font-family: Ogg;
 }
 
-.incredible, .worthy {
-    color: #FAD961;
-    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.valuable, .comfortable, .have, .accept, .overcome, .important { //worthless, uncomfortable, avoid, fail, useless
+    background: linear-gradient(220deg, #F58643, #FF5B6B);
+    @include gradientRespira;
+}
+
+.work-in-progress, .self-sufficient, .openminded { // failure, lonely, angry
+    // GREEN
+    color: #40793C;
     font-family: Respira;
+    font-size: 0.95em;
 }
 
-.live, .accepted {
+.persevere, .strengthening, .improving, .motivating, .desirable { // give up, damaging, hurting, hard
+    // GREEN
+    color: #3DA874;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.calm2, .caring { // pain, cruel
+    color: #FC9563;
+    font-size: 1.1em;
+}
+
+.self-esteem, .genuine { // insecurity
+    color: #EF7979;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.incredible, .worthy, .gorgeous { //awful, unworthy
+    color: #FAD961;
+    background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
+    @include gradientRespira;
+}
+
+.live, .accepted { // die, judged
     color: #ffd230;
-    font-family: Adieu;
+    font-family: Respira;
+    font-size: 0.95em;
 }
 
-.blessing, .commit, .re-adjustment, .grateful {
-    color: #4158D0;
-    background: linear-gradient(35deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.commit, .re-adjustment, .grateful, .great-person { // cheat, breakdown, bitter, fuckup, asshole
+    color: #FFD17D;
     font-family: Ogg;
-    font-size: 1.05em;
 }
