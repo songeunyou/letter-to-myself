@@ -1,7 +1,5 @@
-@font-face {
-    font-family: Cooper;
-    src: url("../fonts/CooperLight.ttf") format("truetype");
-}
+@import 'fonts';
+@import 'responsive';
 
 .App {
     height: 100%;
@@ -9,14 +7,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #242530;
+    background: #1D1D1D;
     font-family: Cooper;
 }
 
 h1 {
     position: absolute;
     font-size: 20px;
-    color: white;
+    color: #E8DECB;
     margin: 80px 0px 40px 0px;
     width: calc(100vw - 480px);
     z-index: 10;
@@ -27,11 +25,12 @@ h1 {
     position: relative;
     width: 100vw;
     min-height: 100vh;
-    padding: 160px 240px 10px 240px;
-    font-size: 26px;
-    color: white;
+    padding: 160px 240px;
+    font-size: 28px;
+    color: #E8DECB;
     border: none;
     resize: none;
+    transition: 0.1s;
 
     &:focus {
         outline: none;
@@ -41,107 +40,113 @@ h1 {
 .inline {
     position: relative;
     display: inline-block;
-    margin: 0px 4px;
+    margin: 0px;
     z-index: 1;
-    font-weight: bolder;
-
-    img {
-        position: absolute;
-        top: 0px;
-        z-index: -10;
-    }
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-    }
 }
 
-.hopeful {
-    width: 180px;
 
-    img {
-        transform: translateY(-20px);
-        width: 180px;
-        height: 380px;
-    }
+/*----- DESCRIPTORS -----*/
 
-    p {
-        color: #173F09;
-    }
-}
-
-.beautiful {
-    width: 200px;
-
-    img {
-        width: 200px;
-        height: 130px;
-        transform: translateY(-84px);
-    }
-
-    p {
-        color: #f5ab00;
-        background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
-
-.work-in-progress {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-60px);
-    }
-}
-
-.calm {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-60px);
-    }
-
-    p {
-        color: #4a948d;
-    }
-}
-
-.calm2 {
-    width: 220px;
-
-    img {
-        max-width: 220px;
-        transform: translateY(-131px);
-    }
-
-    p {
-        color: #ffa67a;
-    }
-}
-
-.love {
-    color: #fad343;
-    background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
+@mixin gradientRespira {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: Respira;
+    font-size: 0.95em;
 }
 
-.happy {
+@mixin gradientOgg {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Ogg;
+}
+
+.good, .possible { // bad, impossible
+    color: #ff6b42;
+    font-family: Ogg;
+}
+
+.confident, .source-of-strength, .secure, .exhilarating { // fear, trigger, anxious, terrifying
+    // GREEN
+    color: #85FFBD;
+    background: linear-gradient(45deg, #63D497 0%, #FFE16F 100%);
+    @include gradientOgg;
+}
+
+.love, .get-better, .admiring { // hate, kill myself, jealous
+    background: -webkit-linear-gradient(-80deg, #FAD05A, #EB2180);
+    @include gradientRespira;
+}
+
+.good-enough, .refreshing, .comforted, .happy, .great, .distinctive { // inadequate, tiring, isolated, sad, horrible, strange
+    color: #FFC63F;
+    font-family: Ogg;
+}
+
+.hopeful, .mindfulness, .flawless { // depressed, depression
+    color: #E29030;
+    font-family: Ogg;
+}
+
+.calm, .unique, .interesting { // worry, weird, boring
+    // GREEN
+    color: #79CD9F;
+    font-family: Ogg;
+}
+
+.not-afraid, .courageous, .strong, .cool { // afraid, awkward, hurt, uncool
+    color: #44ABC5;
+    font-size: 1.1em;
+}
+
+.beautiful, .appealing, .better, .attractive { // ugly, disgusting, worse, unattractive
+    // BLUE
+    color: #25B2AA;
+    font-family: Ogg;
+}
+
+.valuable, .comfortable, .have, .accept, .overcome, .important { //worthless, uncomfortable, avoid, fail, useless
+    background: linear-gradient(220deg, #F58643, #FF5B6B);
+    @include gradientRespira;
+}
+
+.work-in-progress, .self-sufficient, .openminded { // failure, lonely, angry
+    // GREEN
+    color: #40793C;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.persevere, .strengthening, .improving, .motivating, .desirable { // give up, damaging, hurting, hard
+    // GREEN
+    color: #3DA874;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.calm2, .caring { // pain, cruel
+    color: #FC9563;
+    font-size: 1.1em;
+}
+
+.self-esteem, .genuine { // insecurity
+    color: #EF7979;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.incredible, .worthy, .gorgeous { //awful, unworthy
     color: #FAD961;
-    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
+    @include gradientRespira;
 }
 
-.valuable {
-    color: #ff8ab7;
-    background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.live, .accepted { // die, judged
+    color: #ffd230;
+    font-family: Respira;
+    font-size: 0.95em;
+}
+
+.commit, .re-adjustment, .grateful, .great-person { // cheat, breakdown, bitter, fuckup, asshole
+    color: #FFD17D;
+    font-family: Ogg;
 }

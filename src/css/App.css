@@ -2,20 +2,48 @@
   font-family: Cooper;
   src: url("../fonts/CooperLight.ttf") format("truetype");
 }
+@font-face {
+  font-family: Ogg;
+  src: url("../fonts/Ogg.otf") format("opentype");
+}
+@font-face {
+  font-family: Respira;
+  src: url("../fonts/Respira.otf") format("opentype");
+}
+@font-face {
+  font-family: Bigilla;
+  src: url("../fonts/Bigilla.otf") format("opentype");
+}
+@font-face {
+  font-family: Elgoc;
+  src: url("../fonts/Elgoc.otf") format("opentype");
+}
+@font-face {
+  font-family: Glassure;
+  src: url("../fonts/Glassure.otf") format("opentype");
+}
+@font-face {
+  font-family: GT;
+  src: url("../fonts/GT Sectra Fine.ttf") format("truetype");
+}
+@font-face {
+  font-family: GTBold;
+  src: url("../fonts/GT Sectra Bold.ttf") format("truetype");
+}
 .App {
   height: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: #242530;
+  background: #1D1D1D;
   font-family: Cooper;
 }
 
 h1 {
   position: absolute;
   font-size: 20px;
-  color: white;
+  color: #E8DECB;
   margin: 80px 0px 40px 0px;
   width: calc(100vw - 480px);
   z-index: 10;
@@ -26,11 +54,12 @@ h1 {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  padding: 160px 240px 10px 240px;
-  font-size: 26px;
-  color: white;
+  padding: 160px 240px;
+  font-size: 28px;
+  color: #E8DECB;
   border: none;
   resize: none;
+  transition: 0.1s;
 }
 #start-typing:focus {
   outline: none;
@@ -39,98 +68,106 @@ h1 {
 .inline {
   position: relative;
   display: inline-block;
-  margin: 0px 4px;
-  z-index: 1;
-  font-weight: bolder;
-}
-.inline img {
-  position: absolute;
-  top: 0px;
-  z-index: -10;
-}
-.inline p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0px;
+  z-index: 1;
 }
 
-.hopeful {
-  width: 180px;
-}
-.hopeful img {
-  transform: translateY(-20px);
-  width: 180px;
-  height: 380px;
-}
-.hopeful p {
-  color: #173F09;
+/*----- DESCRIPTORS -----*/
+.good, .possible {
+  color: #ff6b42;
+  font-family: Ogg;
 }
 
-.beautiful {
-  width: 200px;
-}
-.beautiful img {
-  width: 200px;
-  height: 130px;
-  transform: translateY(-84px);
-}
-.beautiful p {
-  color: #f5ab00;
-  background: -webkit-linear-gradient(-80deg, #f5ab00 0%, #f8ff2b 100%);
+.confident, .source-of-strength, .secure, .exhilarating {
+  color: #85FFBD;
+  background: linear-gradient(45deg, #63D497 0%, #FFE16F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: Ogg;
 }
 
-.work-in-progress {
-  width: 220px;
-}
-.work-in-progress img {
-  max-width: 220px;
-  transform: translateY(-60px);
-}
-
-.calm {
-  width: 220px;
-}
-.calm img {
-  max-width: 220px;
-  transform: translateY(-60px);
-}
-.calm p {
-  color: #4a948d;
-}
-
-.calm2 {
-  width: 220px;
-}
-.calm2 img {
-  max-width: 220px;
-  transform: translateY(-131px);
-}
-.calm2 p {
-  color: #ffa67a;
-}
-
-.love {
-  color: #fad343;
-  background: -webkit-linear-gradient(-80deg, #fcd23a 0%, #ff26be 100%);
+.love, .get-better, .admiring {
+  background: -webkit-linear-gradient(-80deg, #FAD05A, #EB2180);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
 }
 
-.happy {
+.good-enough, .refreshing, .comforted, .happy, .great, .distinctive {
+  color: #FFC63F;
+  font-family: Ogg;
+}
+
+.hopeful, .mindfulness, .flawless {
+  color: #E29030;
+  font-family: Ogg;
+}
+
+.calm, .unique, .interesting {
+  color: #79CD9F;
+  font-family: Ogg;
+}
+
+.not-afraid, .courageous, .strong, .cool {
+  color: #44ABC5;
+  font-size: 1.1em;
+}
+
+.beautiful, .appealing, .better, .attractive {
+  color: #25B2AA;
+  font-family: Ogg;
+}
+
+.valuable, .comfortable, .have, .accept, .overcome, .important {
+  background: linear-gradient(220deg, #F58643, #FF5B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.work-in-progress, .self-sufficient, .openminded {
+  color: #40793C;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.persevere, .strengthening, .improving, .motivating, .desirable {
+  color: #3DA874;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.calm2, .caring {
+  color: #FC9563;
+  font-size: 1.1em;
+}
+
+.self-esteem, .genuine {
+  color: #EF7979;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.incredible, .worthy, .gorgeous {
   color: #FAD961;
-  background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+  background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
 }
 
-.valuable {
-  color: #ff8ab7;
-  background: linear-gradient(220deg, #ff8ab7 0%, #3bfff8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.live, .accepted {
+  color: #ffd230;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.commit, .re-adjustment, .grateful, .great-person {
+  color: #FFD17D;
+  font-family: Ogg;
 }
 
 /*# sourceMappingURL=App.css.map */
