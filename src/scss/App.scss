@@ -11,19 +11,44 @@
     font-family: Cooper;
 }
 
+.placeholder {
+    position: absolute;
+    top: 440px;
+    left: 300px;
+    color: #E8DECB;
+    opacity: 0.3;
+    font-size: 24px;
+}
+
 .parallax-box {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 650px;
+    width: 835px;
     height: 120px;
     top: 0px;
     margin: 180px 0px 40px 0px;
     // border: solid blue 1px;
     z-index: 100;
 
+    .date, .comment {
+        position: absolute;
+        bottom: -90px;
+        color: #E8DECB;
+        opacity: 0.8;
+        font-size: 14px;
+    }
+
+    .date {
+        left: 0px;
+    }
+
+    .comment {
+        right: 0px;
+    }
 }
+
 
 h1 {
     position: absolute;
@@ -39,7 +64,7 @@ h1 {
     height: 500px;
     overflow: hidden;
     bottom: 100px;
-    transform: translateX(-10px);
+    transform: translateX(-4px);
     z-index: -2;
 
     .gradient-box {

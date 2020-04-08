@@ -14,7 +14,6 @@ class Input extends Component {
         };
 
         this.contentEditable = React.createRef();
-        this.checkForSpace = this.rewrite.bind(this);
     }
 
     componentDidMount() {
@@ -22,6 +21,16 @@ class Input extends Component {
     }
 
     rewrite = evt => {
+        if (evt.keyCode === 8 || evt.keyCode === 46) {
+            if (evt.target.innerHTML.length === 0) {
+                this.props.checkForText(false);
+            } else {
+                this.props.checkForText(true);
+            }
+        } else {
+            this.props.checkForText(true);
+        }
+
         let textArr = evt.target.innerHTML.toString().split(" ");
 
         for (let i = 0; i < textArr.length - 2; i++) {
@@ -53,6 +62,7 @@ class Input extends Component {
             }
 
         let p = textArr.join(' ');
+
         this.setState({html: p});
     };
 

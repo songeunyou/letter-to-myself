@@ -508,6 +508,10 @@ let list = [
         positive: '<div class="inline self-esteem">self-esteem</div>'
     },
     {
+        negative: "insecurities",
+        positive: '<div class="inline self-esteem">virtues</div>'
+    },
+    {
         negative: "doubt",
         positive: "believe"
     },
