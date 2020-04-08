@@ -79,7 +79,7 @@ h1 {
     position: relative;
     width: 100vw;
     min-height: 60vh;
-    padding: 100px 300px 20px 300px;
+    padding: 100px 300px 140px 300px;
     font-size: 24px;
     color: #ccc5b8;
     border: none;
@@ -178,7 +178,7 @@ h1 {
 .confident, .source-of-strength, .secure, .exhilarating { // fear, trigger, anxious, terrifying
     // GREEN
     color: #85FFBD;
-    background: linear-gradient(45deg, #63D497 0%, #FFE16F 100%);
+    background: linear-gradient(45deg, #3db374 0%, #f7da68 100%);
     @include gradientOgg;
 }
 
@@ -188,29 +188,30 @@ h1 {
 }
 
 .good-enough, .refreshing, .comforted, .happy, .great, .distinctive { // inadequate, tiring, isolated, sad, horrible, strange
-    color: #FFC63F;
+    color: #faab00;
     font-family: Ogg;
 }
 
 .hopeful, .mindfulness, .flawless { // depressed, depression
-    color: #E29030;
+    color: #e38629;
     font-family: Ogg;
 }
 
 .calm, .unique, .interesting { // worry, weird, boring
     // GREEN
-    color: #79CD9F;
+    color: #65cf94;
     font-family: Ogg;
 }
 
 .not-afraid, .courageous, .strong, .cool { // afraid, awkward, hurt, uncool
-    color: #44ABC5;
-    font-size: 1.1em;
+    // green
+    color: #a8d485;
+    font-family: Ogg;
 }
 
 .beautiful, .appealing, .better, .attractive { // ugly, disgusting, worse, unattractive
-    // BLUE
-    color: #25B2AA;
+    // green
+    color: #00ab80;
     font-family: Ogg;
 }
 
@@ -220,43 +221,42 @@ h1 {
 }
 
 .work-in-progress, .self-sufficient, .openminded { // failure, lonely, angry
-    // GREEN
-    color: #40793C;
+    color: #edb940;
     font-family: Respira;
     font-size: 0.95em;
 }
 
 .persevere, .strengthening, .improving, .motivating, .desirable { // give up, damaging, hurting, hard
     // GREEN
-    color: #3DA874;
+    color: #1b9e54;
     font-family: Respira;
     font-size: 0.95em;
 }
 
 .calm2, .caring { // pain, cruel
-    color: #FC9563;
-    font-size: 1.1em;
+    color: #fa9a69;
+    font-family: Ogg;
 }
 
 .self-esteem, .genuine { // insecurity
-    color: #EF7979;
+    color: #e66e6e;
     font-family: Respira;
     font-size: 0.95em;
 }
 
 .incredible, .worthy, .gorgeous { //awful, unworthy
     color: #FAD961;
-    background: linear-gradient(90deg, #FFCC70 0%, #D55B16 100%);
+    background: linear-gradient(90deg, #ffc94d 0%, #d57916 100%);
     @include gradientRespira;
 }
 
 .live, .accepted { // die, judged
-    color: #ffd230;
+    color: #FFD17D;
     font-family: Respira;
     font-size: 0.95em;
 }
 
 .commit, .re-adjustment, .grateful, .great-person { // cheat, breakdown, bitter, fuckup, asshole
-    color: #FFD17D;
+    color: #d9a338;
     font-family: Ogg;
 }
