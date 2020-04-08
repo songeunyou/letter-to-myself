@@ -21,8 +21,8 @@ class App extends Component {
 
 
         document.onmousemove = function(event) {
-            var x = (event.clientX / window.innerWidth) * 6;
-            var y = (event.clientY / window.innerHeight) * 18;
+            var x = (event.clientX / window.innerWidth) * 6 - 5;
+            var y = (event.clientY / window.innerHeight) * 18 - 5;
 
             // var x2 = (event.clientX / window.innerWidth) * 1.05 - 5;
             // var y2 = (event.clientY / window.innerHeight) * 1.6 - 5;

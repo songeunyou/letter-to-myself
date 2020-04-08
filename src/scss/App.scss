@@ -39,6 +39,8 @@ h1 {
     height: 500px;
     overflow: hidden;
     bottom: 100px;
+    transform: translateX(-10px);
+    z-index: -2;
 
     .gradient-box {
         position: relative;
@@ -77,7 +79,7 @@ h1 {
     position: relative;
     width: 100vw;
     min-height: 100vh;
-    padding: 100px 240px 20px 240px;
+    padding: 100px 300px 20px 300px;
     font-size: 24px;
     color: #ccc5b8;
     border: none;
