@@ -296,6 +296,10 @@ let list = [
         positive: '<div class="inline motivating">motivating</div>'
     },
     {
+        negative: "tough",
+        positive: '<div class="inline motivating">motivating</div>'
+    },
+    {
         negative: "painful",
         positive: "healing"
     },
@@ -903,10 +907,6 @@ let list = [
     {
         negative: "always",
         positive: "sometimes"
-    },
-    {
-        negative: "every",
-        positive: "some"
     },
     {
         negative: "none",
