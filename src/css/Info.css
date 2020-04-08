@@ -82,6 +82,10 @@
 }
 .info-box {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 800px;
   background: #1D1D1D;
@@ -90,8 +94,6 @@
   color: #E8DECB;
   font-family: Cooper;
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
   padding: 100px 40px;
 }
 .info-box .row {
@@ -126,6 +128,16 @@
   opacity: 1;
   top: 50%;
   transform: translateY(-52%);
+}
+
+.exit {
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.exit:hover {
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=Info.css.map */

@@ -20,17 +20,19 @@ class Info extends Component {
 
                 <div className="row">
                     <div className="before">
-                        <p className="title">BEFORE</p>
+                        <p className="title">NEGATIVE</p>
                         I felt pretty bad today. I hate how I look and it made me feel really anxious to go outside. I don't want people seeing my ugly face and fat body. I just want to give up.
                     </div>
                     <div className="after">
-                        <p className="title">AFTER</p>
+                        <p className="title">POSITIVE</p>
                         I felt pretty <div className="inline good">good</div> today. I <div className="inline love">love</div> how I look and it made me feel really <div className="inline secure">secure</div> to go outside. I want people seeing my <div className="inline beautiful">beautiful</div> face and <div className="inline good-looking">good-looking</div> body. I want to <div className="inline persevere">persevere</div>.
                     </div>
                 </div>
 
                 <div className="about">
                 </div>
+
+                <div className="exit" onClick={this.props.toggleInfoBox}>&#8251; Close</div>
             </div>
         )
     }

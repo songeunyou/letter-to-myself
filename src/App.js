@@ -64,7 +64,9 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Info visible={this.state.infoBox}/>
+                <Info
+                    visible={this.state.infoBox}
+                    toggleInfoBox={this.infoBox}/>
 
                 <div id="header">
                     <h1 id="title">Letter to Myself</h1>
