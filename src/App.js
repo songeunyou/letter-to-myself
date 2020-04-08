@@ -22,24 +22,17 @@ class App extends Component {
 
     componentDidMount() {
         var title = document.getElementById("title");
-        var photo = document.getElementById("photo");
         var subtitle = document.getElementById("subtitle");
-
 
         document.onmousemove = function(event) {
             var x = (event.clientX / window.innerWidth) * 6 - 4;
             var y = (event.clientY / window.innerHeight) * 18 - 4;
 
-            // var x2 = (event.clientX / window.innerWidth) * 1.05 - 5;
-            // var y2 = (event.clientY / window.innerHeight) * 1.6 - 5;
-
-
-            var x3 = (event.clientX / window.innerWidth) * 1.5 - 2;
-            var y3 = (event.clientY / window.innerHeight) * 8 - 6;
+            var x2 = (event.clientX / window.innerWidth) * 1.5 - 2;
+            var y2 = (event.clientY / window.innerHeight) * 8 - 6;
 
             title.style.transform = "translate("+x+"%,"+y+"%)";
-            // photo.style.transform = "translate("+x2+"%,"+y2+"%)";
-            subtitle.style.transform = "translate("+x3+"%,"+y3+"%)";
+            subtitle.style.transform = "translate("+x2+"%,"+y2+"%)";
         }
     }
 
