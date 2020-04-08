@@ -1,0 +1,121 @@
+#start-typing {
+  position: relative;
+  width: 100vw;
+  min-height: 60vh;
+  padding: 100px 340px 140px 340px;
+  font-size: 24px;
+  color: #ccc5b8;
+  border: none;
+  resize: none;
+  transition: 0.1s;
+}
+#start-typing:focus {
+  outline: none;
+}
+
+.inline {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  z-index: 1;
+}
+
+/*----- DESCRIPTORS -----*/
+.good, .possible {
+  color: #ff6b42;
+  font-family: Ogg;
+}
+
+.confident, .pleasant, .source-of-strength, .secure, .exhilarating {
+  color: #85FFBD;
+  background: linear-gradient(45deg, #3db374 0%, #f7da68 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Ogg;
+}
+
+.love, .get-better, .admiring {
+  background: -webkit-linear-gradient(-80deg, #FAD05A, #EB2180);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.good-enough, .refreshing, .comforted, .happy, .great, .distinctive {
+  color: #faab00;
+  font-family: Ogg;
+}
+
+.hopeful, .mindfulness, .flawless {
+  color: #e38629;
+  font-family: Ogg;
+}
+
+.calm, .unique, .interesting {
+  color: #65cf94;
+  font-family: Ogg;
+}
+
+.not-afraid, .courageous, .strong, .cool {
+  color: #a8d485;
+  font-family: Ogg;
+}
+
+.beautiful, .appealing, .better, .attractive {
+  color: #00ab80;
+  font-family: Ogg;
+}
+
+.valuable, .comfortable, .have, .accept, .overcome, .important {
+  background: linear-gradient(220deg, #F58643, #FF5B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.work-in-progress, .self-sufficient, .openminded {
+  color: #edb940;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.persevere, .strengthening, .improving, .motivating, .desirable {
+  color: #1b9e54;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.calm2, .caring {
+  color: #fa9a69;
+  font-family: Ogg;
+}
+
+.self-esteem, .genuine, .good-looking {
+  color: #e66e6e;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.incredible, .worthy, .gorgeous {
+  color: #FAD961;
+  background: linear-gradient(90deg, #ffc94d 0%, #d57916 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.live, .accepted {
+  color: #FFD17D;
+  font-family: Respira;
+  font-size: 0.95em;
+}
+
+.commit, .re-adjustment, .grateful, .great-person {
+  color: #d9a338;
+  font-family: Ogg;
+}
+
+/*# sourceMappingURL=Input.css.map */

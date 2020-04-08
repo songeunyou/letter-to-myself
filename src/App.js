@@ -4,6 +4,7 @@ import './css/App.css';
 import letter from './media/letter.jpg';
 
 import Input from './components/Input';
+import Info from './components/Info';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
         };
 
         this.checkForText = this.checkForText.bind(this);
+        this.infoBox = this.infoBox.bind(this);
     }
 
     componentDidMount() {
@@ -46,6 +48,14 @@ class App extends Component {
         });
     }
 
+    infoBox() {
+        if (this.state.infoBox === true) {
+            this.setState({infoBox: false});
+        } else {
+            this.setState({infoBox: true});
+        }
+    }
+
     render() {
 
         let date = new Date();
@@ -54,19 +64,22 @@ class App extends Component {
 
         return (
             <div className="App">
-                <div className="parallax-box">
-                    <div className="date">{monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear()}</div>
-                    <div className="comment">&#8251; How does this work?</div>
+                <Info visible={this.state.infoBox}/>
 
+                <div id="header">
                     <h1 id="title">Letter to Myself</h1>
-                    <div id="letter-box">
+                    <div id="background-photo">
                         <img id="photo" src={letter}/>
                         <h2 id="subtitle">Sometimes we're too hard on ourselves. Write out your negative self talk—let's try to change it up</h2>
                         <div className="gradient-box"/>
                     </div>
+
+                    <div className="date">{monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear()}</div>
+                    <div className="info-btn" onClick={this.infoBox}>&#8251; How does this work?</div>
                 </div>
+
                 <Input checkForText={this.checkForText}/>
-                {this.state.textExists ? "" : <div className="placeholder">Start typing...</div>}
+                {this.state.textExists ? "" : <div id="placeholder">Start typing...</div>}
             </div>
         );
     }

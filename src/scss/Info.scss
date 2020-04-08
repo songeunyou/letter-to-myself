@@ -1,0 +1,59 @@
+@import 'fonts';
+@import 'responsive';
+@import 'variables';
+
+.info-box {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: $background;
+    z-index: 30;
+    transition: 0.5s;
+    color: $textColor;
+    font-family: Cooper;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+
+    .row {
+        margin: 40px 0px;
+        // padding: 35px 0px 40px 0px;
+        display: flex;
+        border-top: 1px solid rgba(232, 222, 203, 0.05);
+        border-bottom: 1px solid rgba(232, 222, 203, 0.05);
+
+        .before, .after {
+            flex: 1;
+            font-size: 22px;
+            // text-align: justify;
+
+            .title {
+                margin: 4px 0px;
+                font-size: 15px;
+                opacity: 0.5;
+                // font-family: Ogg;
+            }
+        }
+
+        .before {
+            padding: 35px 38px 40px 0px;
+            border-right: 1px solid rgba(232, 222, 203, 0.05);
+        }
+
+        .after {
+            padding: 35px 0px 40px 40px;
+        }
+    }
+}
+
+.invisible {
+    opacity: 0;
+    top: -10%;
+}
+
+.visible {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-52%);
+}

@@ -1,26 +1,19 @@
 @import 'fonts';
 @import 'responsive';
+@import 'variables';
 
 .App {
+    position: relative;
     height: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #1D1D1D;
+    background: $background;
     font-family: Cooper;
 }
 
-.placeholder {
-    position: absolute;
-    top: 440px;
-    left: 340px;
-    color: #E8DECB;
-    opacity: 0.3;
-    font-size: 24px;
-}
-
-.parallax-box {
+#header {
     position: relative;
     display: flex;
     align-items: center;
@@ -29,13 +22,55 @@
     height: 120px;
     top: 0px;
     margin: 180px 0px 40px 0px;
-    // border: solid blue 1px;
-    z-index: 100;
+    z-index: 20;
 
-    .date, .comment {
+    h1 {
+        position: absolute;
+        font-size: 90px;
+        color: $textColor;
+        font-family: Ogg;
+    }
+
+    #background-photo {
+        position: relative;
+        width: 300px;
+        height: 500px;
+        overflow: hidden;
+        bottom: 100px;
+        transform: translateX(-4px);
+        z-index: -2;
+
+        .gradient-box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%);
+            z-index: -10;
+        }
+
+        #photo {
+            position: absolute;
+            width: 320px;
+            height: 530px;
+            z-index: -30;
+        }
+
+        h2 {
+            position: absolute;
+            text-align: center;
+            font-size: 16px;
+            color: #ccc5b8;
+            margin: 10px 20px 24px 20px;
+            bottom: 0px;
+            z-index: 10;
+            pointer-events: none;
+        }
+    }
+
+    .date, .info-btn {
         position: absolute;
         bottom: -90px;
-        color: #E8DECB;
+        color: $textColor;
         opacity: 0.8;
         font-size: 14px;
     }
@@ -44,244 +79,22 @@
         left: 0px;
     }
 
-    .comment {
+    .info-btn {
         right: 0px;
+        cursor: pointer;
+        transition: 0.1s;
+
+        &:hover {
+            opacity: 0.4;
+        }
     }
 }
 
-
-h1 {
+#placeholder {
     position: absolute;
-    font-size: 90px;
-    color: #E8DECB;
-    font-family: Ogg;
-}
-
-
-#letter-box {
-    position: relative;
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    bottom: 100px;
-    transform: translateX(-4px);
-    z-index: -2;
-
-    .gradient-box {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%);
-        z-index: -10;
-        // background: blue;
-    }
-
-    #photo {
-        position: absolute;
-        width: 320px;
-        height: 530px;
-        z-index: -30;
-    }
-
-    h2 {
-        position: absolute;
-        text-align: center;
-        font-size: 16px;
-        // color: #696256;
-        color: #ccc5b8;
-        margin: 10px 20px 24px 20px;
-        // font-weight: bolder;
-        // margin: 240px 0px 40px 0px;
-        // width: calc(100vw - 480px);
-        bottom: 0px;
-        z-index: 10;
-        pointer-events: none;
-    }
-}
-
-
-#start-typing {
-    position: relative;
-    width: 100vw;
-    min-height: 60vh;
-    padding: 100px 340px 140px 340px;
+    top: 440px;
+    left: 340px;
+    color: $textColor;
+    opacity: 0.3;
     font-size: 24px;
-    color: #ccc5b8;
-    border: none;
-    resize: none;
-    transition: 0.1s;
-
-    &:focus {
-        outline: none;
-    }
-}
-
-.inline {
-    position: relative;
-    display: inline-block;
-    margin: 0px;
-    z-index: 1;
-}
-
-// /*----- RESPONSIVE FORMATTING -----*/
-//
-// @media only screen and (max-width: 1200px) {
-//     h1, h2 {
-//         width: calc(100vw - 320px);
-//     }
-//
-//     #start-typing {
-//         padding: 160px 160px;
-//     }
-// }
-//
-// @media only screen and (max-width: 1000px) {
-//     h1, h2 {
-//         width: calc(100vw - 200px);
-//     }
-//
-//     #start-typing {
-//         padding: 160px 100px;
-//     }
-// }
-//
-// @media only screen and (max-width: 700px) {
-//     h1, h2 {
-//         width: calc(100vw - 120px);
-//     }
-//
-//     #start-typing {
-//         padding: 180px 60px;
-//         font-size: 22px;
-//     }
-// }
-//
-// @media only screen and (max-width: 500px) {
-//     h1, h2 {
-//         width: calc(100vw - 120px);
-//     }
-//
-//     #start-typing {
-//         padding: 180px 60px;
-//     }
-// }
-//
-// @media only screen and (max-width: 480px) {
-//     h1, h2 {
-//         margin: 36px 0px 40px 0px;
-//         width: calc(100vw - 60px);
-//         font-size: 18px;
-//     }
-//
-//     #start-typing {
-//         padding: 120px 30px;
-//         font-size: 16px;
-//     }
-// }
-//
-
-/*----- DESCRIPTORS -----*/
-
-@mixin gradientRespira {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Respira;
-    font-size: 0.95em;
-}
-
-@mixin gradientOgg {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Ogg;
-}
-
-.good, .possible { // bad, impossible
-    color: #ff6b42;
-    font-family: Ogg;
-}
-
-.confident, .pleasant, .source-of-strength, .secure, .exhilarating { // fear, gross, trigger, anxious, terrifying
-    // GREEN
-    color: #85FFBD;
-    background: linear-gradient(45deg, #3db374 0%, #f7da68 100%);
-    @include gradientOgg;
-}
-
-.love, .get-better, .admiring { // hate, kill myself, jealous
-    background: -webkit-linear-gradient(-80deg, #FAD05A, #EB2180);
-    @include gradientRespira;
-}
-
-.good-enough, .refreshing, .comforted, .happy, .great, .distinctive { // inadequate, tiring, isolated, sad, horrible, strange
-    color: #faab00;
-    font-family: Ogg;
-}
-
-.hopeful, .mindfulness, .flawless { // depressed, depression
-    color: #e38629;
-    font-family: Ogg;
-}
-
-.calm, .unique, .interesting { // worry, weird, boring
-    // GREEN
-    color: #65cf94;
-    font-family: Ogg;
-}
-
-.not-afraid, .courageous, .strong, .cool { // afraid, awkward, hurt, uncool
-    // green
-    color: #a8d485;
-    font-family: Ogg;
-}
-
-.beautiful, .appealing, .better, .attractive { // ugly, disgusting, worse, unattractive
-    // green
-    color: #00ab80;
-    font-family: Ogg;
-}
-
-.valuable, .comfortable, .have, .accept, .overcome, .important { //worthless, uncomfortable, avoid, fail, useless
-    background: linear-gradient(220deg, #F58643, #FF5B6B);
-    @include gradientRespira;
-}
-
-.work-in-progress, .self-sufficient, .openminded { // failure, lonely, angry
-    color: #edb940;
-    font-family: Respira;
-    font-size: 0.95em;
-}
-
-.persevere, .strengthening, .improving, .motivating, .desirable { // give up, damaging, hurting, hard
-    // GREEN
-    color: #1b9e54;
-    font-family: Respira;
-    font-size: 0.95em;
-}
-
-.calm2, .caring { // pain, cruel
-    color: #fa9a69;
-    font-family: Ogg;
-}
-
-.self-esteem, .genuine, .good-looking { // insecurity, fat
-    color: #e66e6e;
-    font-family: Respira;
-    font-size: 0.95em;
-}
-
-.incredible, .worthy, .gorgeous { //awful, unworthy
-    color: #FAD961;
-    background: linear-gradient(90deg, #ffc94d 0%, #d57916 100%);
-    @include gradientRespira;
-}
-
-.live, .accepted { // die, judged
-    color: #FFD17D;
-    font-family: Respira;
-    font-size: 0.95em;
-}
-
-.commit, .re-adjustment, .grateful, .great-person { // cheat, breakdown, bitter, fuckup, asshole
-    color: #d9a338;
-    font-family: Ogg;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContentEditable from 'react-contenteditable';
+import '../css/Input.css';
 
 import list from './posNegList';
 
