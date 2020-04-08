@@ -3,19 +3,18 @@
 @import 'variables';
 
 .info-box {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 800px;
-    height: 800px;
+    height: 105vh;
     padding: 100px 40px;
     background: $background;
     color: $textColor;
     font-family: Cooper;
     font-size: 18px;
-    z-index: 30;
     transition: 0.5s;
 
     .image-container {
@@ -49,7 +48,6 @@
             .info-image {
                 width: 120%;
                 height: auto;
-
             }
 
             .gradient-box {
@@ -81,7 +79,6 @@
         .before, .after {
             flex: 1;
             font-size: 22px;
-            // text-align: justify;
 
             .title {
                 margin: 4px 0px;
@@ -103,7 +100,8 @@
 
 .invisible {
     opacity: 0;
-    top: -10%;
+    top: 50%;
+    transform: translateY(-52%);
 }
 
 .visible {
