@@ -13,6 +13,7 @@ class App extends Component {
 
         this.state = {
             textExists: false,
+            infoBox: false,
         };
 
         this.checkForText = this.checkForText.bind(this);
@@ -49,6 +50,7 @@ class App extends Component {
     }
 
     infoBox() {
+
         if (this.state.infoBox === true) {
             this.setState({infoBox: false});
         } else {
@@ -68,11 +70,16 @@ class App extends Component {
                     visible={this.state.infoBox}
                     toggleInfoBox={this.infoBox}/>
 
-                <div id="header">
-                    <h1 id="title">Letter to Myself</h1>
+                <div id="header" className={this.state.infoBox ? "hide-header" : ""}>
+                    <div className="title-box">
+                        <h1 id="title">Letter to Myself</h1>
+                    </div>
+
                     <div id="background-photo">
                         <img id="photo" src={letter}/>
-                        <h2 id="subtitle">Sometimes we're too hard on ourselves. Write out your negative self talk—let's try to change it up</h2>
+                        <div className="subtitle-box">
+                            <h2 id="subtitle">Sometimes we're too hard on ourselves. Write out your negative self talk—let's try to change it up</h2>
+                        </div>
                         <div className="gradient-box"/>
                     </div>
 
@@ -80,8 +87,10 @@ class App extends Component {
                     <div className="info-btn" onClick={this.infoBox}>&#8251; How does this work?</div>
                 </div>
 
-                <Input checkForText={this.checkForText}/>
-                {this.state.textExists ? "" : <div id="placeholder">Start typing...</div>}
+                <div id="input-box" className={this.state.infoBox ? "hide-input" : ""}>
+                    <Input checkForText={this.checkForText}/>
+                    {this.state.textExists ? "" : <div id="placeholder">Start typing...</div>}
+                </div>
             </div>
         );
     }
