@@ -3,6 +3,7 @@ import '../css/Info.css';
 import '../css/App.css';
 
 import field from '../media/field.jpg';
+import letter from '../media/letter.jpg';
 
 class Info extends Component {
 
@@ -17,13 +18,15 @@ class Info extends Component {
         return (
             <div className={"info-box " + `${this.props.visible ? "visible" : "invisible"}`}>
                 <div className="row">
-                    <div className="image-box">
-                        <img className="info-image" src={field}/>
-                        <div className="gradient-box"/>
+                    <div className="image-container">
+                        <h3>How does this work?</h3>
+                        <div className="image-box">
+                            <img className="info-image" src={letter}/>
+                            <div className="gradient-box"/>
+                        </div>
                     </div>
 
                     <div className="description">
-                        <h3>How does this work?</h3>
                         <p>You know you deserve compassion, but it's difficult to tell yourself kind things when you're in a bad place.</p>
                         <p>It's okay. Say the hurtful, ugly things. The negative words with be replaced with positive ones so that in the end you've written an incredible love letter to yourself.</p>
                     </div>
