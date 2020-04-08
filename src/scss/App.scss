@@ -14,7 +14,7 @@
 .placeholder {
     position: absolute;
     top: 440px;
-    left: 300px;
+    left: 340px;
     color: #E8DECB;
     opacity: 0.3;
     font-size: 24px;
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 835px;
+    width: 760px;
     height: 120px;
     top: 0px;
     margin: 180px 0px 40px 0px;
@@ -104,7 +104,7 @@ h1 {
     position: relative;
     width: 100vw;
     min-height: 60vh;
-    padding: 100px 300px 140px 300px;
+    padding: 100px 340px 140px 340px;
     font-size: 24px;
     color: #ccc5b8;
     border: none;
@@ -200,7 +200,7 @@ h1 {
     font-family: Ogg;
 }
 
-.confident, .source-of-strength, .secure, .exhilarating { // fear, trigger, anxious, terrifying
+.confident, .pleasant, .source-of-strength, .secure, .exhilarating { // fear, gross, trigger, anxious, terrifying
     // GREEN
     color: #85FFBD;
     background: linear-gradient(45deg, #3db374 0%, #f7da68 100%);
@@ -263,7 +263,7 @@ h1 {
     font-family: Ogg;
 }
 
-.self-esteem, .genuine { // insecurity
+.self-esteem, .genuine, .good-looking { // insecurity, fat
     color: #e66e6e;
     font-family: Respira;
     font-size: 0.95em;

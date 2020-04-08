@@ -249,7 +249,7 @@ let list = [
     },
     {
         negative: "gross",
-        positive: '<div class="inline confident">confident</div>'
+        positive: '<div class="inline pleasant">pleasant</div>'
     },
     {
         negative: "sick",
@@ -258,6 +258,10 @@ let list = [
     {
         negative: "unattractive",
         positive: '<div class="inline attractive">attractive</div>'
+    },
+    {
+        negative: "fat",
+        positive: '<div class="inline good-looking">good-looking</div>'
     },
     {
         negative: "small",

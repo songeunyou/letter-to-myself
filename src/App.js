@@ -56,7 +56,7 @@ class App extends Component {
             <div className="App">
                 <div className="parallax-box">
                     <div className="date">{monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear()}</div>
-                    <div className="comment">How does this work?</div>
+                    <div className="comment">&#8251; How does this work?</div>
 
                     <h1 id="title">Letter to Myself</h1>
                     <div id="letter-box">
