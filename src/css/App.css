@@ -90,12 +90,52 @@
   font-family: Cooper;
 }
 
+.parallax-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  height: 120px;
+  top: 0px;
+  margin: 180px 0px 40px 0px;
+  z-index: 100;
+}
+
 h1 {
   position: absolute;
-  font-size: 20px;
+  font-size: 90px;
   color: #E8DECB;
-  margin: 80px 0px 40px 0px;
-  width: calc(100vw - 480px);
+  font-family: Ogg;
+}
+
+#letter-box {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  bottom: 100px;
+}
+#letter-box .gradient-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: -10;
+}
+#letter-box #photo {
+  position: absolute;
+  width: 320px;
+  height: 530px;
+  z-index: -30;
+}
+#letter-box h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc5b8;
+  margin: 10px 20px 24px 20px;
+  bottom: 0px;
   z-index: 10;
   pointer-events: none;
 }
@@ -104,9 +144,9 @@ h1 {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  padding: 160px 240px;
-  font-size: 28px;
-  color: #E8DECB;
+  padding: 100px 240px 20px 240px;
+  font-size: 24px;
+  color: #ccc5b8;
   border: none;
   resize: none;
   transition: 0.1s;
@@ -122,56 +162,6 @@ h1 {
   z-index: 1;
 }
 
-/*----- RESPONSIVE FORMATTING -----*/
-@media only screen and (max-width: 1200px) {
-  h1 {
-    width: calc(100vw - 320px);
-  }
-
-  #start-typing {
-    padding: 160px 160px;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  h1 {
-    width: calc(100vw - 200px);
-  }
-
-  #start-typing {
-    padding: 160px 100px;
-  }
-}
-@media only screen and (max-width: 700px) {
-  h1 {
-    width: calc(100vw - 120px);
-  }
-
-  #start-typing {
-    padding: 180px 60px;
-    font-size: 22px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  h1 {
-    width: calc(100vw - 120px);
-  }
-
-  #start-typing {
-    padding: 180px 60px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h1 {
-    margin: 36px 0px 40px 0px;
-    width: calc(100vw - 60px);
-    font-size: 18px;
-  }
-
-  #start-typing {
-    padding: 120px 30px;
-    font-size: 16px;
-  }
-}
 /*----- DESCRIPTORS -----*/
 .good, .possible {
   color: #ff6b42;
