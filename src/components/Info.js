@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../css/Info.css';
 import '../css/App.css';
 
+import field from '../media/field.jpg';
+
 class Info extends Component {
 
     constructor(props) {
@@ -14,12 +16,20 @@ class Info extends Component {
     render() {
         return (
             <div className={"info-box " + `${this.props.visible ? "visible" : "invisible"}`}>
-                <div className="description">
-                    <p>You know you deserve compassion, but it's difficult to tell yourself kind things when you're in a bad place.</p>
-                    <p>It's okay. Say the hurtful, ugly things. The negative words with be replaced with positive ones so that in the end you've written an incredible love letter to yourself.</p>
+                <div className="row">
+                    <div className="image-box">
+                        <img className="info-image" src={field}/>
+                        <div className="gradient-box"/>
+                    </div>
+
+                    <div className="description">
+                        <h3>How does this work?</h3>
+                        <p>You know you deserve compassion, but it's difficult to tell yourself kind things when you're in a bad place.</p>
+                        <p>It's okay. Say the hurtful, ugly things. The negative words with be replaced with positive ones so that in the end you've written an incredible love letter to yourself.</p>
+                    </div>
                 </div>
 
-                <div className="row">
+                <div className="row-lined">
                     <div className="before">
                         <p className="title">What you type:</p>
                         I felt pretty bad today. I hate how I look and it made me feel really anxious to go outside. I don't want people seeing my ugly face and fat body. I just want to give up.
