@@ -3,6 +3,7 @@ import '../css/Info.css';
 import '../css/App.css';
 
 import field from '../media/field.jpg';
+import letter from '../media/letter.jpg';
 
 class Info extends Component {
 
@@ -20,7 +21,7 @@ class Info extends Component {
                     <div className="image-container">
                         <h3>How does this work?</h3>
                         <div className="image-box">
-                            <img className="info-image" src={field}/>
+                            <img className="info-image" src={letter}/>
                             <div className="gradient-box"/>
                         </div>
                     </div>
