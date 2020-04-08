@@ -13,6 +13,12 @@
     font-family: Cooper;
 }
 
+<<<<<<< Updated upstream
+=======
+
+/*----- HEADER -----*/
+
+>>>>>>> Stashed changes
 #header {
     position: relative;
     display: flex;
@@ -90,11 +96,95 @@
     }
 }
 
+<<<<<<< Updated upstream
 #placeholder {
     position: absolute;
     top: 440px;
+=======
+
+
+/*----- STUFF TO MAKE THE INFO BOX TRANSITION WORK -----*/
+
+.hide-header {
+    transform: translateY(-50vh);
+
+    .title-box {
+        transform: translateY(-30vh);
+    }
+
+    .subtitle-box {
+        transform: translateY(-15vh);
+    }
+}
+
+.title-box {
+    position: absolute;
+    width: 83%;
+    height: 100px;
+    transition: 1.2s;
+}
+
+.subtitle-box {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+    transition: 1.2s;
+}
+
+#input-box {
+    position: relative;
+    transition: 1.4s;
+}
+
+.hide-input {
+    transform: translateY(80vh);
+    animation-name: hide;
+    animation-duration: 0.1s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+    0% {
+        z-index: 1;
+    }
+    100% {
+        z-index: -60;
+    }
+}
+
+#placeholder {
+    position: absolute;
+    top: 100px;
+>>>>>>> Stashed changes
     left: 340px;
     color: $textColor;
     opacity: 0.3;
     font-size: 24px;
 }
+<<<<<<< Updated upstream
+=======
+
+.signoff-box {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    padding: 100px 340px 140px 340px;
+
+    .signoff {
+        width: 160px;
+        color: $textColor;
+        font-size: 32px;
+        font-family: Ogg;
+    }
+
+    .signature {
+        width: 400px;
+        height: 36px;
+        border-bottom: solid 1px rgba(232, 222, 203, 0.3);
+    }
+}
+>>>>>>> Stashed changes

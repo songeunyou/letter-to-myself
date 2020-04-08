@@ -15,7 +15,10 @@
     color: $textColor;
     font-family: Cooper;
     font-size: 18px;
+<<<<<<< Updated upstream
     z-index: 30;
+=======
+>>>>>>> Stashed changes
     transition: 0.5s;
 
     .image-container {
@@ -49,7 +52,6 @@
             .info-image {
                 width: 120%;
                 height: auto;
-
             }
 
             .gradient-box {
@@ -81,7 +83,6 @@
         .before, .after {
             flex: 1;
             font-size: 22px;
-            // text-align: justify;
 
             .title {
                 margin: 4px 0px;

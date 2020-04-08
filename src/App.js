@@ -80,8 +80,20 @@ class App extends Component {
                     <div className="info-btn" onClick={this.infoBox}>&#8251; How does this work?</div>
                 </div>
 
+<<<<<<< Updated upstream
                 <Input checkForText={this.checkForText}/>
                 {this.state.textExists ? "" : <div id="placeholder">Start typing...</div>}
+=======
+                <div id="input-box" className={this.state.infoBox ? "hide-input" : ""}>
+                    <Input checkForText={this.checkForText}/>
+                    {this.state.textExists ? "" : <div id="placeholder">Start typing...</div>}
+
+                    <div className="signoff-box">
+                        <div className="signoff">Sincerely,</div>
+                        <div className="signature"></div>
+                    </div>
+                </div>
+>>>>>>> Stashed changes
             </div>
         );
     }
