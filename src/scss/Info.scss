@@ -10,17 +10,22 @@
     align-items: center;
     width: 800px;
     height: 800px;
+    padding: 100px 40px;
     background: $background;
-    z-index: 30;
-    transition: 0.5s;
     color: $textColor;
     font-family: Cooper;
-    font-size: 20px;
-    padding: 100px 40px;
+    font-size: 18px;
+    z-index: 30;
+    transition: 0.5s;
+
+    .description {
+        p {
+            margin: 10px 0px;
+        }
+    }
 
     .row {
-        margin: 40px 0px;
-        // padding: 35px 0px 40px 0px;
+        margin: 30px 0px 40px 0px;
         display: flex;
         border-top: 1px solid rgba(232, 222, 203, 0.05);
         border-bottom: 1px solid rgba(232, 222, 203, 0.05);
@@ -34,7 +39,6 @@
                 margin: 4px 0px;
                 font-size: 15px;
                 opacity: 0.5;
-                // font-family: Ogg;
             }
         }
 
