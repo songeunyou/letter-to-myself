@@ -1,28 +1,5 @@
 /*----- RESPONSIVE FORMATTING -----*/
 
-// .date, .info-btn {
-//     position: absolute;
-//     bottom: -90px;
-//     color: $textColor;
-//     opacity: 0.8;
-//     font-size: 14px;
-// }
-//
-// .date {
-//     left: 0px;
-// }
-//
-// .info-btn {
-//     right: 0px;
-//     cursor: pointer;
-//     transition: 0.1s !important;
-//
-//     &:hover {
-//         opacity: 0.4;
-//     }
-// }
-
-
 @media only screen and (max-width: 1200px) {
     #start-typing {
         padding: 100px 210px;
@@ -42,6 +19,11 @@
 }
 
 @media only screen and (max-width: 900px) {
+
+    #header {
+        width: 620px !important;
+    }
+
     h1 {
         font-size: 70px !important;
     }
@@ -61,9 +43,46 @@
     .info-btn {
         right: 60px;
     }
+
+    .info-box {
+        width: 600px !important;
+
+        .image-container {
+            margin: 10px 80px 10px 20px !important;
+
+            h3 {
+                font-size: 38px !important;
+                width: 110% !important;
+                right: -60px !important;
+            }
+        }
+
+        .description {
+            p {
+                font-size: 15px !important;
+            }
+        }
+
+        .row-lined {
+            margin: 30px 0px !important;
+            flex-direction: column;
+
+            .before, .after {
+                flex: 1;
+                font-size: 20px !important;
+                padding: 20px 0px !important;
+            }
+
+            .before {
+                border-bottom: 1px solid rgba(232, 222, 203, 0.05);
+                border-right: none !important;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
+
     h1 {
         font-size: 58px !important;
     }
@@ -75,6 +94,58 @@
 
     #placeholder {
         left: 40px;
+    }
+
+
+    .date {
+        visibility: hidden;
+    }
+
+    .info-btn {
+        left: 50%;
+        transform: translate(-50%, 32px);
+        text-align: center !important;
+    }
+
+
+    .info-box {
+        width: 500px !important;
+
+        .row {
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        .image-container {
+            height: 200px;
+            width: 100% !important;
+            margin: 10px 0px !important;
+
+            h3 {
+                width: 100% !important;
+                left: 0px !important;
+                top: 75% !important;
+                text-align: center !important;
+            }
+
+            .image-box {
+                .info-image {
+                    transform: translateY(100px);
+                }
+            }
+        }
+
+        .description {
+            padding: 0px !important;
+        }
+
+        .row-lined {
+            margin: 20px 0px !important;
+
+            .before, .after {
+                font-size: 18px !important;
+            }
+        }
     }
 }
 
@@ -111,23 +182,50 @@
     }
 
     #start-typing {
-        padding: 40px 30px;
+        padding: 30px 30px;
         font-size: 16px;
     }
 
     #placeholder {
         left: 30px;
-        top: 40px;
+        top: 30px;
         font-size: 16px;
     }
 
-    .date {
-        visibility: hidden;
+    .info-btn {
+        transform: translate(-50%);
+        text-align: center !important;
     }
 
-    .info-btn {
-        left: 50%;
-        transform: translate(-38%);
+    .info-box {
+        width: 400px !important;
+
+        .image-container {
+            height: 150px !important;
+            margin: -25px 0px 10px 0px !important;
+
+            h3 {
+                font-size: 30px !important;
+            }
+        }
+
+        .description {
+            p {
+                font-size: 13px !important;
+            }
+        }
+
+        .row-lined {
+            margin: 15px 0px !important;
+
+            .before, .after {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    .exit {
+        font-size: 14px !important;
     }
 }
 
@@ -172,8 +270,37 @@
     }
 
     .info-btn {
-        left: 50%;
         bottom: -60px !important;
-        transform: translate(-42%);
+    }
+
+    .info-box {
+        width: 360px !important;
+
+        .image-container {
+            height: 100px !important;
+
+            h3 {
+                font-size: 25px !important;
+            }
+        }
+
+        .description {
+            p {
+                font-size: 12px !important;
+            }
+        }
+
+        .row-lined {
+            margin: 10px 0px !important;
+
+            .before, .after {
+                font-size: 14px !important;
+                padding: 10px 0px !important;
+
+                .title {
+                    font-size: 12px !important;
+                }
+            }
+        }
     }
 }
