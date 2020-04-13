@@ -280,6 +280,10 @@ let list = [
         positive: "pleasing"
     },
     {
+        negative: "lazy",
+        positive: "productive"
+    },
+    {
         negative: "evil",
         positive: '<div class="inline good">good</div>'
     },
@@ -326,6 +330,10 @@ let list = [
     {
         negative: "careless",
         positive: "careful"
+    },
+    {
+        negative: "degenerate",
+        positive: "valuable"
     },
     {
         negative: "stressful",
@@ -591,6 +599,14 @@ let list = [
         positive: "many people"
     },
     {
+        negative: "idiot",
+        positive: "person"
+    },
+    {
+        negative: "bum",
+        positive: "person"
+    },
+    {
         negative: "freak",
         positive: "person"
     },
@@ -808,10 +824,10 @@ let list = [
         negative: "fucking",
         positive: ""
     },
-    // {
-    //     negative: "fuck",
-    //     positive: ""
-    // },
+    {
+        negative: "fuck",
+        positive: ""
+    },
     {
         negative: "fucked",
         secondNegative: "up",
